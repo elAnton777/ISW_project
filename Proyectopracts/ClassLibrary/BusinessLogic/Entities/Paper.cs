@@ -22,7 +22,7 @@ namespace Magazine.Entities
 
             set;
         }
-        public string UploadDate
+        public DateTime UploadDate
         {
 
             get;
