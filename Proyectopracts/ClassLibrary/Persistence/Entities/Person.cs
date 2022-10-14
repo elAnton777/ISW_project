@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Magazine.Entities
 {
-    public partial class Person
-    {
-    }
+    public partial class Person 
+    { 
+    
+    }   
+
+    
 }
