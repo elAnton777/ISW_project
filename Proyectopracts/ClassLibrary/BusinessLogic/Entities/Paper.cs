@@ -8,5 +8,26 @@ namespace Magazine.Entities
 {
     public partial class Paper
     {
+        public int Id
+        {
+
+            get;
+
+            set;
+        }
+        public string Title
+        {
+
+            get;
+
+            set;
+        }
+        public string UploadDate
+        {
+
+            get;
+
+            set;
+        }
     }
 }
