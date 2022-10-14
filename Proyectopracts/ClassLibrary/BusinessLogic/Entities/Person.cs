@@ -8,7 +8,7 @@ namespace Magazine.Entities
 {
     public partial class Person
     {
-        {
+        
         public int Id
         {
 

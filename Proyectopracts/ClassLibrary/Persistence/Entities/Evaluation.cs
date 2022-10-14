@@ -8,5 +8,6 @@ namespace Magazine.Entities
 {
     public partial class Evaluation
     {
+
     }
 }
