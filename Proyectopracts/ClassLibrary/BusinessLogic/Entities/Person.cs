@@ -6,35 +6,20 @@ using System.Threading.Tasks;
 
 namespace Magazine.Entities
 {
+    
     public partial class Person
     {
-        
-        public int Id
+        public Person()
+
         {
-
-            get;
-
-            set;
+            CoAuthorPapers = new List<Paper>();
         }
-        public string Name
+        public Person(string Id, string Name, string Surname)
         {
-
-            get;
-
-            set;
-        }
-        public string Surname
-        {
-
-            get;
-
-            set;
-         }
-        public ICollection<Paper> CoAuthorPapers {
-
-            get; 
-            
-            set; 
+            this.Id = Id;
+            this.Name = Name;
+            this.Surname = Surname;
+            this.CoAuthorPapers = new List<Paper>();
         }
 
     }
