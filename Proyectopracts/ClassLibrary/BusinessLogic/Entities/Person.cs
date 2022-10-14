@@ -29,6 +29,13 @@ namespace Magazine.Entities
             get;
 
             set;
+         }
+        public ICollection<Paper> CoAuthorPapers {
+
+            get; 
+            
+            set; 
         }
+
     }
 }
