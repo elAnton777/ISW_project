@@ -8,5 +8,19 @@ namespace Magazine.Entities
 {
     public partial class Magazine
     {
+        public Magazine() 
+        {
+            Issues = new List<Issue>();
+            Areas = new List<Area>();
+        }
+        public Magazine(int Id, String Name, User ChiefEditor)
+        {
+            this.Id = Id;
+            this.Name = Name;
+            this.ChiefEditor = ChiefEditor;
+
+            this.Issues = new List<Issue>();
+            this.Areas = new List<Area>();
+        }
     }
 }

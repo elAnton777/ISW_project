@@ -8,42 +8,21 @@ namespace Magazine.Entities
 {
     public partial class User
     {
-        public Boolean Alerted
+        public User()
         {
-
-            get;
-
-            set;
+            MainAuthorsPapers = new List<Paper>();
+            
         }
-        public String AreasOfInterest
+        public User(Boolean Alerted, String AreasOfInterest, String Email, String Login, String PassWord, Magazine Magazine)
         {
+            this.Alerted = Alerted;
+            this.AreasOfInterest = AreasOfInterest;
+            this.Email = Email;
+            this.Login = Login;
+            this.Password = PassWord;
+            this.Magazine = Magazine;
 
-            get;
-
-            set;
+            this.MainAuthorsPapers = new List<Paper>();
         }
-        public String Email
-        {
-
-            get;
-
-            set;
-        }
-
-        public int Login
-        {
-
-            get;
-
-            set;
-        }
-        public String Password
-        {
-
-            get;
-
-            set;
-        }
-    
     }
 }

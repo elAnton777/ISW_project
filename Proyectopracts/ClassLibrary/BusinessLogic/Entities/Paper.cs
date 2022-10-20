@@ -8,26 +8,23 @@ namespace Magazine.Entities
 {
     public partial class Paper
     {
-        public int Id
+        public Paper()
         {
-
-            get;
-
-            set;
+            CoAuthors = new List<Person>();
         }
-        public string Title
+        public Paper(int Id, String Title, DateTime UploadDate, User Responsible, Evaluation Evaluation,
+                     Area BelongingArea, Area EvaluationPendingArea, Area PublicationPendingArea)
         {
+            this.Id = Id;
+            this.Title = Title;
+            this.UploadDate = UploadDate;
+            this.Responsible = Responsible;
+            this.Evaluation = Evaluation;
+            this.BelongingArea = BelongingArea;
+            this.EvaluationPendingArea = EvaluationPendingArea;
+            this.PublicationPendingArea = PublicationPendingArea;
 
-            get;
-
-            set;
-        }
-        public DateTime UploadDate
-        {
-
-            get;
-
-            set;
+            this.CoAuthors = new List<Person>();
         }
     }
 }

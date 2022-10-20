@@ -8,20 +8,22 @@ namespace Magazine.Entities
 {
     public partial class Area
     {
-        public int Id
+        public Area()
         {
-
-            get;
-
-            set;
+            Papers = new List<Paper>();
+            EvaluationPending = new List<Paper>();
+            PublicationPending = new List<Paper>();
         }
-        public string Name
+        public Area(int Id, String Name, User Editor)
         {
+            this.Id = Id;
+            this.Name = Name;
+            this.Editor = Editor;
 
-            get;
+            this.Papers = new List<Paper>();
+            this.EvaluationPending = new List<Paper>();
+            this.PublicationPending = new List<Paper>();
 
-            set;
         }
-   
     }
 }

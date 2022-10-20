@@ -8,34 +8,12 @@ namespace Magazine.Entities
 {
     public partial class Evaluation
     {
-        public Boolean Accepted
+        public Evaluation(bool accepted, string comments, DateTime date, int id)
         {
-            get;
-
-            set;
+            Accepted = accepted;
+            Comments = comments;
+            Date = date;
+            Id = id;
         }
-
-        public string Comments
-        {
-            get;
-
-            set;
-        }
-
-        public DateTime Date
-        {
-            get;
-
-            set;
-        }
-
-        public int Id
-        {
-            get;
-
-            set;
-        }
-
     }
 }
-
