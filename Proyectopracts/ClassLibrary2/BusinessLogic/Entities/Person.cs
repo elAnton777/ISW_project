@@ -14,9 +14,9 @@ namespace Magazine.Entities
         {
             CoAuthorPapers = new List<Paper>();
         }
-        public Person(int Id, string Name, string Surname)
+        public Person( string Name, string Surname)
         {
-            this.Id = Id;
+            //this.Id = Id;
             this.Name = Name;
             this.Surname = Surname;
             this.CoAuthorPapers = new List<Paper>();

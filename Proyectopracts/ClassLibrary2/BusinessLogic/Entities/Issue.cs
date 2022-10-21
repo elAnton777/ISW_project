@@ -13,9 +13,9 @@ namespace Magazine.Entities
         {
             PublishedPapers = new List<Paper>();
         }
-        public Issue(int Id, int Number, DateTime? PublicationDate, Magazine magazine)
+        public Issue( int Number, DateTime? PublicationDate, Magazine magazine)
         {
-            this.Id = Id;
+            //this.Id = Id;
             this.Number = Number;
            /* this.DateTime? = PublicationDate;*/ PublicationDate = null;
             this.Magazine = magazine;
