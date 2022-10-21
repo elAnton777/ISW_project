@@ -12,6 +12,11 @@ namespace Magazine.Entities
         {
             CoAuthors = new List<Person>();
         }
+
+        public Paper(string eXPECTED_PAPER_TITLE, DateTime eXPECTED_PAPER_UPLOADDATE, Area eXPECTED_PAPER_AREA, User eXPECTED_PAPER_RESPONSIBLE)
+        {
+        }
+
         public Paper( String Title, DateTime UploadDate, User Responsible, Evaluation Evaluation,
                      Area BelongingArea, Area EvaluationPendingArea, Area PublicationPendingArea)
         {

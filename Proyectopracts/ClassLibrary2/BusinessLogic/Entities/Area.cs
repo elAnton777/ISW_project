@@ -8,6 +8,8 @@ namespace Magazine.Entities
 {
     public partial class Area
     {
+        public object Magazine;
+
         public Area()
         {
             Papers = new List<Paper>();
@@ -24,6 +26,10 @@ namespace Magazine.Entities
             this.EvaluationPending = new List<Paper>();
             this.PublicationPending = new List<Paper>();
 
+        }
+
+        public Area(string Name, User Editor, Magazine eXPECTED_AREA_MAGAZINE) : this(Name, Editor)
+        {
         }
     }
 }
