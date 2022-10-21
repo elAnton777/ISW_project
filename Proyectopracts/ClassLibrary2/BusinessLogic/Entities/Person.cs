@@ -12,14 +12,14 @@ namespace Magazine.Entities
         public Person()
 
         {
-            CoAuthorPapers = new List<Paper>();
+            CoAuthoredPapers = new List<Paper>();
         }
-        public Person( string Name, string Surname)
+        public Person(String Id, string Name, string Surname) :this()   
         {
-            //this.Id = Id;
+            this.Id = Id;
             this.Name = Name;
             this.Surname = Surname;
-            this.CoAuthorPapers = new List<Paper>();
+            //this.CoAuthorPapers = new List<Paper>();
         }
 
     }

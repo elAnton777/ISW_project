@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Magazine.Entities
 {
-    public partial class User
+    public partial class User :Person
     {
-        public Boolean Alerted { get; set; }
-
-        public String Name { get; set; }
+        public bool Alerted { get; set; }
 
         public String Email { get; set; }
+
+        public virtual Area Area { get; set; }
 
         public String Login { get; set; }
 
@@ -20,8 +20,11 @@ namespace Magazine.Entities
 
         public String AreasOfInterest { get; set; }
 
-        public Magazine Magazine { get; set; }
+        public virtual Magazine Magazine { get; set; }
 
-        public ICollection<Paper> MainAuthorsPapers { get; set; }
+        public virtual ICollection<Paper> MainAuthoredPapers { get; set; }
+
+        public virtual Paper Paper { get; set; }
+
     }
 }

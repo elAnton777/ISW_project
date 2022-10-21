@@ -13,34 +13,36 @@ namespace Magazine.Entities
             get;
             set;
         }
-        public string Name
+        public String Name
         {
             get;
             set;
         }
 
-        public ICollection<Paper> Papers
+        public virtual ICollection<Paper> Papers
         {
             get;
             set;
         }
 
-        public ICollection<Paper> EvaluationPending 
+        public virtual ICollection<Paper> EvaluationPending 
         {
             get;
             set;
         }
         
-        public ICollection<Paper> PublicationPending 
+        public virtual ICollection<Paper> PublicationPending 
         {
             get; 
             set;
         }
 
-        public User Editor 
+        public virtual User Editor 
         {
             get;
             set;
         }
+
+        public virtual Magazine Magazine { get; set; }
     }
 }

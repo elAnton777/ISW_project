@@ -16,14 +16,14 @@ namespace Magazine.Entities
 
         
 
-        public Issue( int Number, Magazine magazine)
+        public Issue( int Number, Magazine magazine) :this()
         {
             //this.Id = Id;
             this.Number = Number;
-           /* this.DateTime? = PublicationDate;*/ PublicationDate = null;
+            PublicationDate = null;
             this.Magazine = magazine;
 
-            this.PublishedPapers = new List<Paper>();
+           // this.PublishedPapers = new List<Paper>();
         }
 
         

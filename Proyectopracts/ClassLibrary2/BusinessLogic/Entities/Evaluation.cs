@@ -8,6 +8,10 @@ namespace Magazine.Entities
 {
     public partial class Evaluation
     {
+        public Evaluation()
+        {
+
+        }
         public Evaluation(bool accepted, string comments, DateTime date)
         {
             this.Accepted = accepted;

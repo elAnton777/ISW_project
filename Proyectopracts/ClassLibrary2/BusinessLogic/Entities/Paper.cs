@@ -13,23 +13,18 @@ namespace Magazine.Entities
             CoAuthors = new List<Person>();
         }
 
-        public Paper(string eXPECTED_PAPER_TITLE, DateTime eXPECTED_PAPER_UPLOADDATE, Area eXPECTED_PAPER_AREA, User eXPECTED_PAPER_RESPONSIBLE)
-        {
-        }
 
-        public Paper( String Title, DateTime UploadDate, User Responsible, Evaluation Evaluation,
-                     Area BelongingArea, Area EvaluationPendingArea, Area PublicationPendingArea)
+        public Paper(string Title, DateTime UploadDate, Area BelongingArea, User Responsible) :this()
         {
             //this.Id = Id;
             this.Title = Title;
             this.UploadDate = UploadDate;
             this.Responsible = Responsible;
-            this.Evaluation = Evaluation;
-            this.BelongingArea = BelongingArea;
-            this.EvaluationPendingArea = EvaluationPendingArea;
-            this.PublicationPendingArea = PublicationPendingArea;
 
-            this.CoAuthors = new List<Person>();
+            this.BelongingArea = BelongingArea;
+            CoAuthors.Add(Responsible);
+
+            //this.CoAuthors = new List<Person>();
         }
     }
 }

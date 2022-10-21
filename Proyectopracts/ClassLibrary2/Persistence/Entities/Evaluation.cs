@@ -8,7 +8,7 @@ namespace Magazine.Entities
 {
     public partial class Evaluation
     {
-        public Boolean Accepted
+        public bool Accepted
         {
             get;
 

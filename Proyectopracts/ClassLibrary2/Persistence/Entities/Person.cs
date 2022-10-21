@@ -9,7 +9,7 @@ namespace Magazine.Entities
     public partial class Person
     {
 
-        public int Id
+        public String Id
         {
 
             get;
@@ -30,7 +30,7 @@ namespace Magazine.Entities
 
             set;
         }
-        public ICollection<Paper> CoAuthorPapers
+        public virtual ICollection<Paper> CoAuthoredPapers
         {
 
             get;

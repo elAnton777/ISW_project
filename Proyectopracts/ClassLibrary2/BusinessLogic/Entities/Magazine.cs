@@ -13,14 +13,14 @@ namespace Magazine.Entities
             Issues = new List<Issue>();
             Areas = new List<Area>();
         }
-        public Magazine(String Name, User ChiefEditor)
+        public Magazine(String Name, User ChiefEditor) :this()
         {
             //this.Id = Id;
             this.Name = Name;
             this.ChiefEditor = ChiefEditor;
 
-            this.Issues = new List<Issue>();
-            this.Areas = new List<Area>();
+           /* this.Issues = new List<Issue>();
+            this.Areas = new List<Area>();*/
         }
     }
 }
