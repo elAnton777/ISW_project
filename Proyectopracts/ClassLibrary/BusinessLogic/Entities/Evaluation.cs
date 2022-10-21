@@ -10,10 +10,10 @@ namespace Magazine.Entities
     {
         public Evaluation(bool accepted, string comments, DateTime date, int id)
         {
-            Accepted = accepted;
-            Comments = comments;
-            Date = date;
-            Id = id;
+            this.Accepted = accepted;
+            this.Comments = comments;
+            this.Date = date;
+            this.Id = id;
         }
     }
 }
