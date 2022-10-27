@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagazineObjectDesignTests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagazineLib", "ClassLibrary2\MagazineLib.csproj", "{57683719-F794-4B39-A0A0-5FB516145A1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagazinePersistenceTests", "..\..\..\..\Desktop\MagazinePersistenceTests\MagazinePersistenceTests.csproj", "{54877077-11BB-48B1-BC83-F287F137CF21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{57683719-F794-4B39-A0A0-5FB516145A1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57683719-F794-4B39-A0A0-5FB516145A1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57683719-F794-4B39-A0A0-5FB516145A1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54877077-11BB-48B1-BC83-F287F137CF21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54877077-11BB-48B1-BC83-F287F137CF21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54877077-11BB-48B1-BC83-F287F137CF21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54877077-11BB-48B1-BC83-F287F137CF21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +43,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4011CF53-3F2A-4236-8013-3531C2160163} = {C73BE4DD-6B79-48C2-921A-EDE4ED0EB5C7}
 		{57683719-F794-4B39-A0A0-5FB516145A1C} = {BD01CC1D-8047-4ED1-A9A1-C6C1DC4B8173}
+		{54877077-11BB-48B1-BC83-F287F137CF21} = {C73BE4DD-6B79-48C2-921A-EDE4ED0EB5C7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0AF1FA2D-4737-4CB7-923E-083C32E16559}
