@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace Magazine.Entities
 {
     public partial class Person
     {
-
+        [Key]
         public String Id
         {
 
@@ -16,6 +17,7 @@ namespace Magazine.Entities
 
             set;
         }
+        [Required]
         public string Name
         {
 
@@ -23,6 +25,7 @@ namespace Magazine.Entities
 
             set;
         }
+        [Required]
         public string Surname
         {
 

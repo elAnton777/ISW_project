@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace Magazine.Entities
             get;
             set;
         }
+
         public String Name
         {
             get;
@@ -37,12 +39,14 @@ namespace Magazine.Entities
             set;
         }
 
+        [Required]
         public virtual User Editor 
         {
             get;
             set;
         }
 
+        [Required]
         public virtual Magazine Magazine { get; set; }
     }
 }
