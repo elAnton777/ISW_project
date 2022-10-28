@@ -19,11 +19,13 @@ namespace Magazine.Entities
         public virtual User Responsible { get; set; }
 
         [Required]
+        [InverseProperty("Papers")]
         public virtual Area BelongingArea { get; set; }
 
-       // [InverseProperty("EvaluationPending")]
+        [InverseProperty("EvaluationPending")]
         public virtual Area EvaluationPendingArea { get; set; }
 
+        [InverseProperty("PublicationPending")]
         public virtual Area PublicationPendingArea { get; set; } 
         public virtual ICollection<Person> CoAuthors { get; set; }
         public virtual Issue Issue { get; set; }
