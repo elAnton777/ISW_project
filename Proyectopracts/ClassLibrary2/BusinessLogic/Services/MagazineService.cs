@@ -86,7 +86,16 @@ namespace Magazine.Services
             else throw new ServiceException("Area with name " + area.Name + " already exists.");
         }
 
-	// A partid de aquí escribid vuestras implementaciones
+	    public void AddUser(User user)
+        {
+            if(dal.GetById<User>(user.Id) == null)
+            {
+                dal.Insert<User>(user);
+                dal.Commit();
+            }
+            else throw new ServiceException("User with name " + user.Name + " already exists.")
+
+        }
 
 
     }
