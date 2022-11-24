@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Magazine.Entities;
@@ -18,9 +20,11 @@ namespace Magazine.Services
         void AddPerson(Person p);
         void AddMagazine(Magazine.Entities.Magazine m);
         void AddArea(Area a);
-		
-		// A partir de aquí cread los vuestros
-		// void AddUser(User u);
+
+        // A partir de aquí cread los vuestros
+        // void AddUser(User u);
+
+        string Login(string u, string p);
 
     }
 }

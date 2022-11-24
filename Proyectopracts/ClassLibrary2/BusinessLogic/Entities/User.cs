@@ -25,9 +25,8 @@ namespace Magazine.Entities
 
             this.MainAuthoredPapers = new List<Paper>();
         }
+        
 
-      /*  public User(string eXPECTED_PERSON_ID, string eXPECTED_PERSON_NAME, string eXPECTED_PERSON_SURNAME, bool eXPECTED_USER_ALERTED, string eXPECTED_USER_AREASOFINTEREST, string eXPECTED_USER_EMAIL, string eXPECTED_USER_LOGIN, string eXPECTED_USER_PASSWORD)
-        {
-        }*/
+     
     }
 }

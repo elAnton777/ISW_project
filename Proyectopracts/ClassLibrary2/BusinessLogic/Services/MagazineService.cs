@@ -1,6 +1,7 @@
 ﻿using Magazine.Entities;
 using Magazine.Persistence;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -12,6 +13,9 @@ namespace Magazine.Services
     public class MagazineService: IMagazineService 
     {
         private readonly IDAL dal;
+
+        private User loggedUser;
+
 
         public MagazineService(IDAL dal)
         {
@@ -88,12 +92,25 @@ namespace Magazine.Services
 
 	    public void AddUser(User user)
         {
-            if(dal.GetById<User>(user.Id) == null)
+            if (dal.GetById<User>(user.Id) == null)
             {
                 dal.Insert<User>(user);
                 dal.Commit();
             }
-            else throw new ServiceException("User with name " + user.Name + " already exists.")
+            else throw new ServiceException("User with name " + user.Name + " already exists.");
+
+        }
+
+        public string Login(string Login, string Password) {
+
+            if (Login == null) throw new ServiceException("Introduzca Usuario");
+            if (Password == null) throw new ServiceException("Introduzca contraseña");
+            if (!dal.GetWhere<User>(x => x.Login == Login && x.Password == Password).Any()) throw new ServiceException("Usuario " + Login + " no existe o contraseña incorrecta");
+            IEnumerable<User> usuario = dal.GetWhere<User>(x => x.Login == Login && x.Password == Password);
+            User user = usuario.First();
+            String id = user.Id;
+            return id;
+            
 
         }
 
