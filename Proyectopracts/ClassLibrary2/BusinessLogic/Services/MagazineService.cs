@@ -101,6 +101,17 @@ namespace Magazine.Services
 
         }
 
+        public void AddPaper(Paper paper)
+        {
+            if (!dal.GetWhere<Paper>(x => x.Title == paper.Title).Any())
+            {
+                dal.Insert<Paper>(paper);
+                dal.Commit();
+            }
+            else throw new ServiceException("El paper" + paper.Title+ " ya existe.");
+
+        }
+
         void Login(string Login, string Password) {
 
             if (Login == null)
@@ -136,5 +147,7 @@ namespace Magazine.Services
 
             return user;
         }
+
+        
     }
 }
