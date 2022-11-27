@@ -14,7 +14,7 @@ namespace Magazine.Services
     {
         private readonly IDAL dal;
 
-        private User loggedUser;
+        private User user;
 
 
         public MagazineService(IDAL dal)
@@ -101,18 +101,43 @@ namespace Magazine.Services
 
         }
 
-        public string Login(string Login, string Password) {
+        void Login(string Login, string Password) {
 
-            if (Login == null) throw new ServiceException("Introduzca Usuario");
-            if (Password == null) throw new ServiceException("Introduzca contraseña");
-            if (!dal.GetWhere<User>(x => x.Login == Login && x.Password == Password).Any()) throw new ServiceException("Usuario " + Login + " no existe o contraseña incorrecta");
-            IEnumerable<User> usuario = dal.GetWhere<User>(x => x.Login == Login && x.Password == Password);
-            User user = usuario.First();
-            String id = user.Id;
-            return id;
-            
+            if (Login == null)
+            {
+                throw new ServiceException("Introduzca un usuario");
+            }
+            if (Password == null)
+            {
+                throw new ServiceException("Introduzca una contraseña");
+            }
 
+            user = dal.GetWhere<User>(x => x.Login).First();
+
+            if (user == null)
+            {
+                throw new ServiceException("El usuario no existe");
+            }
+
+            if (user.Password != Password)
+            {
+                user = null;
+                throw new ServiceException("La contraseña es incorrecta");
+            }
         }
+
+        public User UserLogged()
+        {
+            if(user == null)
+            {
+                throw new ServiceException("No hay ningun usuario logueado");
+            }
+
+            return user;
+        }
+
+
+
 
 
     }
