@@ -112,6 +112,16 @@ namespace Magazine.Services
 
         }
 
+        public Area FindAreaByName(string name) {
+            Area area = dal.GetWhere<Area>(x => x.Name == name).First();
+            if (area != null)
+            {
+                return area;
+            }
+            else {
+                throw new ServiceException("El area con nombre " + name + " no ha podido ser encontrada");
+            }
+        }
 
         void Login(string Login, string Password) {
 
