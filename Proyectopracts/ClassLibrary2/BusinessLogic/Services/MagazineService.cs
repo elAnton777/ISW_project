@@ -112,7 +112,8 @@ namespace Magazine.Services
                 throw new ServiceException("Introduzca una contraseña");
             }
 
-            user = dal.GetWhere<User>(x => x.Login).First();
+            //user = dal.GetWhere<User>(x => x.Login).First();
+            user = dal.GetWhere<User>(x => x.Login == Login).First();
 
             if (user == null)
             {
@@ -135,10 +136,5 @@ namespace Magazine.Services
 
             return user;
         }
-
-
-
-
-
     }
 }
