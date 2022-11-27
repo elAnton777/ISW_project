@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Magazine.Services
 {
-    public class MagazineService: IMagazineService 
+    public class MagazineService : IMagazineService
     {
         private readonly IDAL dal;
 
@@ -90,7 +90,7 @@ namespace Magazine.Services
             else throw new ServiceException("Area with name " + area.Name + " already exists.");
         }
 
-	    public void AddUser(User user)
+        public void AddUser(User user)
         {
             if (dal.GetById<User>(user.Id) == null)
             {
@@ -108,11 +108,11 @@ namespace Magazine.Services
                 dal.Insert<Paper>(paper);
                 dal.Commit();
             }
-            else throw new ServiceException("El paper" + paper.Title+ " ya existe.");
+            else throw new ServiceException("El paper" + paper.Title + " ya existe.");
 
         }
 
-        public Person FindPersonById(string id) {
+        Person FindPersonById(string id) {
             Person person = dal.GetById<Person>(id);
             if (person != null)
             {
@@ -122,7 +122,7 @@ namespace Magazine.Services
                 throw new ServiceException("La persona con Id " + id + " no existe");
             }
         }
-        public Area FindAreaByName(string name) {
+        Area FindAreaByName(string name) {
             Area area = dal.GetWhere<Area>(x => x.Name == name).First();
             if (area != null)
             {
@@ -143,7 +143,7 @@ namespace Magazine.Services
             else {
                 throw new ServiceException("El usuario ya existe");
             }
-        
+
         }
         void Login(string Login, string Password) {
 
@@ -177,9 +177,9 @@ namespace Magazine.Services
             user = null;
         }
 
-        public User UserLogged()
+        User UserLogged()
         {
-            if(user == null)
+            if (user == null)
             {
                 throw new ServiceException("No hay ningun usuario logueado");
             }
@@ -188,7 +188,7 @@ namespace Magazine.Services
         }
 
 
-        public Entities.Magazine GetMagazine() {
+        Entities.Magazine GetMagazine() {
             Entities.Magazine magazine = dal.GetAll<Entities.Magazine>().First();
 
             if (magazine != null)
@@ -200,10 +200,10 @@ namespace Magazine.Services
             }
         }
 
-        public IEnumerable<Entities.Magazine> GetAllMagazines() {
+        IEnumerable<Entities.Magazine> GetAllMagazines() {
             IEnumerable<Entities.Magazine> magazines = dal.GetAll<Entities.Magazine>();
 
-            if(magazines.Count() > 0) {
+            if (magazines.Count() > 0) {
                 return magazines;
             }
             else
@@ -212,7 +212,7 @@ namespace Magazine.Services
             }
         }
 
-        public IEnumerable<Paper> GetEvaluationPendingPapers(Area area)
+        IEnumerable<Paper> GetEvaluationPendingPapers(Area area)
         {
             if (area.EvaluationPending.Count > 0) {
                 return area.EvaluationPending;
@@ -223,14 +223,53 @@ namespace Magazine.Services
             }
         }
 
-        void EvaluatePaper(bool accepted, string comments, DateTime date, int paperId) { 
+        void EvaluatePaper(bool accepted, string comments, DateTime date, int paperId) {
             Paper paper = dal.GetById<Paper>(paperId);
 
-            paper.Evaluation.Accepted= accepted;
-            paper.Evaluation.Comments = comments;
-            paper.Evaluation.Date= date;
+            if (paper != null) {
+                paper.Evaluation.Accepted = accepted;
+                paper.Evaluation.Comments = comments;
+                paper.Evaluation.Date = date;
 
-            dal.Commit();
+                dal.Commit();
+            }
+            else
+            {
+                throw new ServiceException("El Articulo no existe");
+            }
+
+        }
+
+        bool isPublicationPending(int paperId) {
+            Paper paper = dal.GetById<Paper>(paperId);
+
+            if (paper != null) 
+            {
+                if (dal.GetWhere<Area>(x => x.PublicationPending.Contains(paper)))
+                {
+                    return true;
+                }
+                else 
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                throw new ServiceException("El Articulo no existe");
+            }
+        }
+
+        bool isAccepted(int paperId) {
+            Paper paper = dal.GetById<Paper>(paperId);
+            if (paper != null)
+            {
+                return paper.Evaluation.Accepted;
+            }
+            else 
+            {
+                throw new ServiceException("El Articulo no existe");
+            }
         }
 
         public IEnumerable<Paper> GetAllPapers(string id) {
