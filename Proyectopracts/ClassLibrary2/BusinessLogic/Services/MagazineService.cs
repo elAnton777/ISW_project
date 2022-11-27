@@ -211,5 +211,29 @@ namespace Magazine.Services
                 throw new ServiceException("No se ha encontrado ninguna revista");
             }
         }
+
+        public IEnumerable<Paper> GetEvaluationPendingPapers(Area area)
+        {
+            if (area.EvaluationPending.Count > 0) {
+                return area.EvaluationPending;
+            }
+            else
+            {
+                throw new ServiceException("No hay articulos pendientes ");
+            }
+        }
+
+        public IEnumerable<Paper> GetAllPapers() { 
+            IEnumerable<Paper> papers = dal.GetAll<Paper>();
+
+            if (papers.Count() > 0)
+            {
+                return papers;
+            }
+            else
+            {
+                throw new ServiceException("No se han encontrado articulos");
+            }
+        }
     }
 }
