@@ -159,6 +159,10 @@ namespace Magazine.Services
             }
         }
 
+        void Logout() {
+            user = null;
+        }
+
         public User UserLogged()
         {
             if(user == null)
@@ -168,6 +172,8 @@ namespace Magazine.Services
 
             return user;
         }
+
+
 
         
     }
