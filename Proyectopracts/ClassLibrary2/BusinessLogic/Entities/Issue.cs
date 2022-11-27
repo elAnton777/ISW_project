@@ -26,6 +26,13 @@ namespace Magazine.Entities
            // this.PublishedPapers = new List<Paper>();
         }
 
-        
+        void AddPaper(Paper paper) { 
+            this.PublishedPapers.Add(paper);
+        }
+
+        void RemovePaper(Paper paper)
+        {
+            this.PublishedPapers.Remove(paper);
+        }
     }
 }

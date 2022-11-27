@@ -163,6 +163,7 @@ namespace Magazine.Services
             user = null;
         }
 
+
         public User UserLogged()
         {
             if(user == null)
