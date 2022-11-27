@@ -163,7 +163,6 @@ namespace Magazine.Services
             user = null;
         }
 
-
         public User UserLogged()
         {
             if(user == null)
@@ -174,6 +173,30 @@ namespace Magazine.Services
             return user;
         }
 
+
+        public Entities.Magazine GetMagazine() {
+            Entities.Magazine magazine = dal.GetAll<Entities.Magazine>().First();
+
+            if (magazine != null)
+            {
+                return magazine;
+            }
+            else {
+                throw new ServiceException("No se ha encontrado una única revista");
+            }
+        }
+
+        public IEnumerable<Entities.Magazine> GetAllMagazines() {
+            IEnumerable<Entities.Magazine> magazines = dal.GetAll<Entities.Magazine>();
+
+            if(magazines.Count() > 0) {
+                return magazines;
+            }
+            else
+            {
+                throw new ServiceException("No se ha encontrado ninguna revista");
+            }
+        }
 
 
         
