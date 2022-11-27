@@ -112,6 +112,7 @@ namespace Magazine.Services
 
         }
 
+
         void Login(string Login, string Password) {
 
             if (Login == null)

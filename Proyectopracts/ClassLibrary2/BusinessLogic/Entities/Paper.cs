@@ -13,6 +13,16 @@ namespace Magazine.Entities
             CoAuthors = new List<Person>();
         }
 
+        public void AddCoAuthor(Person person) {
+            if (this.CoAuthors.Count < 4)
+            {
+                this.CoAuthors.Add(person);
+            }
+            else
+            {
+                throw new Exception("No pueden haber mas de 4 coautores");
+            }
+        }
 
         public Paper(string Title, DateTime UploadDate, Area BelongingArea, User Responsible) :this()
         {
