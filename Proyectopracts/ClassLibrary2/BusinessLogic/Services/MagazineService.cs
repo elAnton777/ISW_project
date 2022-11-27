@@ -112,6 +112,16 @@ namespace Magazine.Services
 
         }
 
+        public Person FindPersonById(string id) {
+            Person person = dal.GetById<Person>(id);
+            if (person != null)
+            {
+                return person;
+            }
+            else {
+                throw new ServiceException("La persona con Id " + id + " no existe");
+            }
+        }
         public Area FindAreaByName(string name) {
             Area area = dal.GetWhere<Area>(x => x.Name == name).First();
             if (area != null)
@@ -119,7 +129,7 @@ namespace Magazine.Services
                 return area;
             }
             else {
-                throw new ServiceException("El area con nombre " + name + " no ha podido ser encontrada");
+                throw new ServiceException("El area con nombre " + name + " no exite");
             }
         }
 
