@@ -223,7 +223,17 @@ namespace Magazine.Services
             }
         }
 
-        public IEnumerable<Paper> GetAllPapers() { 
+        void EvaluatePaper(bool accepted, string comments, DateTime date, int paperId) { 
+            Paper paper = dal.GetById<Paper>(paperId);
+
+            paper.Evaluation.Accepted= accepted;
+            paper.Evaluation.Comments = comments;
+            paper.Evaluation.Date= date;
+
+            dal.Commit();
+        }
+
+        public IEnumerable<Paper> GetAllPapers(string id) {
             IEnumerable<Paper> papers = dal.GetAll<Paper>();
 
             if (papers.Count() > 0)
@@ -235,5 +245,7 @@ namespace Magazine.Services
                 throw new ServiceException("No se han encontrado articulos");
             }
         }
+
+
     }
 }
