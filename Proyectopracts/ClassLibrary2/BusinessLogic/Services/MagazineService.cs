@@ -133,6 +133,18 @@ namespace Magazine.Services
             }
         }
 
+
+        void Register(User user) {
+            if (dal.GetById<User>(user.Id) == null)
+            {
+                dal.Insert<User>(user);
+                dal.Commit();
+            }
+            else {
+                throw new ServiceException("El usuario ya existe");
+            }
+        
+        }
         void Login(string Login, string Password) {
 
             if (Login == null)
@@ -158,6 +170,8 @@ namespace Magazine.Services
                 throw new ServiceException("La contraseña es incorrecta");
             }
         }
+
+
 
         void Logout() {
             user = null;
@@ -197,8 +211,5 @@ namespace Magazine.Services
                 throw new ServiceException("No se ha encontrado ninguna revista");
             }
         }
-
-
-        
     }
 }
