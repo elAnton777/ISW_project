@@ -31,7 +31,7 @@ namespace Magazine.Services
         void EvaluatePaper(bool accepted, string comments, DateTime date, int paperId);
         bool isPublicationPending(int paperId);
         bool isAccepted(int paperId);
-        public IEnumerable<Paper> GetAllPapers(string id);
+        IEnumerable<Paper> GetAllPapers(string id);
 
         }
     }

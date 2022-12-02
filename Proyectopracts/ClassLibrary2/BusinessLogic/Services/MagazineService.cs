@@ -285,6 +285,39 @@ namespace Magazine.Services
             }
         }
 
+        string IMagazineService.Login(string Login, string Password)
+        {
+            throw new NotImplementedException();
+        }
 
+        void IMagazineService.Register(User user)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IMagazineService.Logout()
+        {
+            user = null;
+        }
+
+        User IMagazineService.UserLogged()
+        {
+            return user;    
+        }
+
+        void IMagazineService.EvaluatePaper(bool accepted, string comments, DateTime date, int paperId)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IMagazineService.isPublicationPending(int paperId)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IMagazineService.isAccepted(int paperId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
