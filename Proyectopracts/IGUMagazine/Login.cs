@@ -11,11 +11,11 @@ using Magazine.Services;
 
 namespace IGUMagazine
 {
-    public partial class AppMagazine : Form
+    public partial class Login : Form
     {
         
         private IMagazineService service;
-        public AppMagazine()
+        public Login()
         {
             InitializeComponent();
             this.service = service;

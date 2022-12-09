@@ -11,9 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{C73B
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{DBACA98A-8528-4AE1-9E04-8AA347454B12}"
-	ProjectSection(SolutionItems) = preProject
-		Class2.cs = Class2.cs
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagazineObjectDesignTests", "MagazineObjectDesignTests\MagazineObjectDesignTests.csproj", "{4011CF53-3F2A-4236-8013-3531C2160163}"
 EndProject
@@ -67,6 +64,7 @@ Global
 		{54877077-11BB-48B1-BC83-F287F137CF21} = {C73BE4DD-6B79-48C2-921A-EDE4ED0EB5C7}
 		{D7446905-6135-43F8-85B5-1F89608CF607} = {C73BE4DD-6B79-48C2-921A-EDE4ED0EB5C7}
 		{B08CF855-97C2-48EF-B0EE-D21F0883C6CF} = {C73BE4DD-6B79-48C2-921A-EDE4ED0EB5C7}
+		{266CF1FE-76F1-4C44-9F3E-1C8EA8F5A09B} = {DBACA98A-8528-4AE1-9E04-8AA347454B12}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0AF1FA2D-4737-4CB7-923E-083C32E16559}

@@ -21,7 +21,7 @@ namespace IGUMagazine
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AppMagazine());
+            Application.Run(new Login());
         }
     }
 }
