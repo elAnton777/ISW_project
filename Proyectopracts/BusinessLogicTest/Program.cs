@@ -120,6 +120,43 @@ namespace BusinessLogicTest
 
         }
 
+        /* void RegisterTest()
+         {
+             Console.WriteLine();
+             Console.WriteLine("Testing register...");
+
+             try
+             {
+                 service.Register(user);
+             }
+         }*/
+
+        // A partir de aquí vuestras pruebas
+
+        void LogoutTest()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Testing logout...");
+
+            try
+            {
+                service.Logout();
+                if(service.UserLogged() != null)
+                {
+                    Console.Out.WriteLine("Error al cerrar sesion.");
+                }
+                else
+                {
+                    Console.Out.WriteLine("Sesion cerrada con exito");
+
+                }
+            }
+            catch (Exception e)
+            {
+                printError(e);
+            }
+        }
+
         // A partir de aquí vuestras pruebas
 
 
