@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBTest", "DBTest1\DBTest.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-BusinessLogicTest", "BusinessLogicTest\3-BusinessLogicTest.csproj", "{B08CF855-97C2-48EF-B0EE-D21F0883C6CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGUMagazine", "IGUMagazine\IGUMagazine.csproj", "{266CF1FE-76F1-4C44-9F3E-1C8EA8F5A09B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{B08CF855-97C2-48EF-B0EE-D21F0883C6CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B08CF855-97C2-48EF-B0EE-D21F0883C6CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B08CF855-97C2-48EF-B0EE-D21F0883C6CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{266CF1FE-76F1-4C44-9F3E-1C8EA8F5A09B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{266CF1FE-76F1-4C44-9F3E-1C8EA8F5A09B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{266CF1FE-76F1-4C44-9F3E-1C8EA8F5A09B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{266CF1FE-76F1-4C44-9F3E-1C8EA8F5A09B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
