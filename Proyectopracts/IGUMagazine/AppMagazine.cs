@@ -20,5 +20,17 @@ namespace IGUMagazine
             InitializeComponent();
             this.service = service;
         }
+
+
+        private void UserTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
