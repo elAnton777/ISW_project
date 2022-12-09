@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Magazine.Persistence;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Magazine.Services;
 
 namespace IGUMagazine
 {
@@ -14,6 +16,9 @@ namespace IGUMagazine
         [STAThread]
         static void Main()
         {
+            IMagazineService service = new MagazineService(new
+            EntityFrameworkDAL(new MagazineDbContext()));
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new AppMagazine());

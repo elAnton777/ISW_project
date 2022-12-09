@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Magazine.Services;
 
 namespace IGUMagazine
 {
-    public partial class Form1 : Form
+    public partial class AppMagazine : Form
     {
-        public Form1()
+        
+        private IMagazineService service;
+        public AppMagazine()
         {
             InitializeComponent();
+            this.service = service;
         }
     }
 }
