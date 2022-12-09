@@ -219,7 +219,19 @@ namespace Magazine.Services
             }
             else
             {
-                throw new ServiceException("No hay articulos pendientes ");
+                throw new ServiceException("No hay articulos pendientes de evaluación");
+            }
+        }
+
+        IEnumerable<Paper> GetPublicationPendingPapers(Area area)
+        {
+            if (area.PublicationPending.Count > 0)
+            {
+                return area.PublicationPending;
+            }
+            else
+            {
+                throw new ServiceException("No hay articulos pendientes de publicación");
             }
         }
 
@@ -238,26 +250,6 @@ namespace Magazine.Services
                 throw new ServiceException("El Articulo no existe");
             }
 
-        }
-
-        bool isPublicationPending(int paperId) {
-            Paper paper = dal.GetById<Paper>(paperId);
-
-            if (paper != null) 
-            {
-                if (dal.GetWhere<Area>(x => x.PublicationPending.Contains(paper)))
-                {
-                    return true;
-                }
-                else 
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                throw new ServiceException("El Articulo no existe");
-            }
         }
 
         bool isAccepted(int paperId) {
