@@ -33,7 +33,6 @@
             this.SurnameTextBox = new System.Windows.Forms.TextBox();
             this.UsernameTextBox = new System.Windows.Forms.TextBox();
             this.EmailTextBox = new System.Windows.Forms.TextBox();
-            this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.NameLabel = new System.Windows.Forms.Label();
             this.SurnameLabel = new System.Windows.Forms.Label();
             this.UsernameLabel = new System.Windows.Forms.Label();
@@ -43,6 +42,8 @@
             this.AlertedTickBox = new System.Windows.Forms.CheckBox();
             this.AreaOfInterestTextBox = new System.Windows.Forms.TextBox();
             this.AreaOfInterestLabel = new System.Windows.Forms.Label();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -81,15 +82,7 @@
             this.EmailTextBox.Location = new System.Drawing.Point(196, 170);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(231, 20);
-            this.EmailTextBox.TabIndex = 4;
-            // 
-            // PasswordTextBox
-            // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(327, 118);
-            this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.PasswordChar = '*';
-            this.PasswordTextBox.Size = new System.Drawing.Size(100, 20);
-            this.PasswordTextBox.TabIndex = 5;
+            this.EmailTextBox.TabIndex = 5;
             // 
             // NameLabel
             // 
@@ -137,7 +130,7 @@
             this.PasswordLabel.Location = new System.Drawing.Point(324, 102);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(61, 13);
-            this.PasswordLabel.TabIndex = 10;
+            this.PasswordLabel.TabIndex = 15;
             this.PasswordLabel.Text = "Contraseña";
             this.PasswordLabel.Click += new System.EventHandler(this.label5_Click);
             // 
@@ -146,7 +139,7 @@
             this.RegisterButton.Location = new System.Drawing.Point(199, 314);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(75, 23);
-            this.RegisterButton.TabIndex = 11;
+            this.RegisterButton.TabIndex = 8;
             this.RegisterButton.Text = "Registrarse";
             this.RegisterButton.UseVisualStyleBackColor = true;
             this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
@@ -157,7 +150,7 @@
             this.AlertedTickBox.Location = new System.Drawing.Point(443, 172);
             this.AlertedTickBox.Name = "AlertedTickBox";
             this.AlertedTickBox.Size = new System.Drawing.Size(59, 17);
-            this.AlertedTickBox.TabIndex = 12;
+            this.AlertedTickBox.TabIndex = 6;
             this.AlertedTickBox.Text = "Alerted";
             this.AlertedTickBox.UseVisualStyleBackColor = true;
             this.AlertedTickBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -167,7 +160,7 @@
             this.AreaOfInterestTextBox.Location = new System.Drawing.Point(327, 118);
             this.AreaOfInterestTextBox.Name = "AreaOfInterestTextBox";
             this.AreaOfInterestTextBox.Size = new System.Drawing.Size(100, 20);
-            this.AreaOfInterestTextBox.TabIndex = 13;
+            this.AreaOfInterestTextBox.TabIndex = 4;
             // 
             // AreaOfInterestLabel
             // 
@@ -179,11 +172,33 @@
             this.AreaOfInterestLabel.Text = "Areas de Interés";
             this.AreaOfInterestLabel.Click += new System.EventHandler(this.label6_Click_1);
             // 
+            // PasswordTextBox
+            // 
+            this.PasswordTextBox.Location = new System.Drawing.Point(196, 222);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
+            this.PasswordTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PasswordTextBox.TabIndex = 7;
+            this.PasswordTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(193, 206);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Contraseña";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click_2);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.AreaOfInterestLabel);
             this.Controls.Add(this.AreaOfInterestTextBox);
             this.Controls.Add(this.AlertedTickBox);
@@ -193,7 +208,6 @@
             this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.SurnameLabel);
             this.Controls.Add(this.NameLabel);
-            this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.UsernameTextBox);
             this.Controls.Add(this.SurnameTextBox);
@@ -214,7 +228,6 @@
         private System.Windows.Forms.TextBox SurnameTextBox;
         private System.Windows.Forms.TextBox UsernameTextBox;
         private System.Windows.Forms.TextBox EmailTextBox;
-        private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.Label SurnameLabel;
         private System.Windows.Forms.Label UsernameLabel;
@@ -224,5 +237,7 @@
         private System.Windows.Forms.CheckBox AlertedTickBox;
         private System.Windows.Forms.TextBox AreaOfInterestTextBox;
         private System.Windows.Forms.Label AreaOfInterestLabel;
+        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.Label label1;
     }
 }
