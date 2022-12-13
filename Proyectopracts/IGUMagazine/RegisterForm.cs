@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Magazine.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,7 +51,38 @@ namespace IGUMagazine
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
-            LoginForm.service.Commit();
+            try
+            {
+                Random _random = new Random();
+                string _id = _random.Next(0, 9999).ToString("D4");
+
+                Magazine.Entities.User _user = new Magazine.Entities.User(_id, NameTextBox.Text, SurnameTextBox.Text, AlertedTickBox.Checked, AreaOfInterestTextBox.Text, EmailTextBox.Text, UsernameTextBox.Text, PasswordTextBox.Text);
+                Console.WriteLine(_user.AreasOfInterest);
+                LoginForm.service.Register(_user);
+
+            }
+            catch (ServiceException) {
+                //DoSomething
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);    
+            }
+        }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

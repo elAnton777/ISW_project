@@ -40,6 +40,9 @@
             this.EmailLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.RegisterButton = new System.Windows.Forms.Button();
+            this.AlertedTickBox = new System.Windows.Forms.CheckBox();
+            this.AreaOfInterestTextBox = new System.Windows.Forms.TextBox();
+            this.AreaOfInterestLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -148,11 +151,42 @@
             this.RegisterButton.UseVisualStyleBackColor = true;
             this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
+            // AlertedTickBox
+            // 
+            this.AlertedTickBox.AutoSize = true;
+            this.AlertedTickBox.Location = new System.Drawing.Point(443, 172);
+            this.AlertedTickBox.Name = "AlertedTickBox";
+            this.AlertedTickBox.Size = new System.Drawing.Size(59, 17);
+            this.AlertedTickBox.TabIndex = 12;
+            this.AlertedTickBox.Text = "Alerted";
+            this.AlertedTickBox.UseVisualStyleBackColor = true;
+            this.AlertedTickBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // AreaOfInterestTextBox
+            // 
+            this.AreaOfInterestTextBox.Location = new System.Drawing.Point(327, 118);
+            this.AreaOfInterestTextBox.Name = "AreaOfInterestTextBox";
+            this.AreaOfInterestTextBox.Size = new System.Drawing.Size(100, 20);
+            this.AreaOfInterestTextBox.TabIndex = 13;
+            // 
+            // AreaOfInterestLabel
+            // 
+            this.AreaOfInterestLabel.AutoSize = true;
+            this.AreaOfInterestLabel.Location = new System.Drawing.Point(325, 102);
+            this.AreaOfInterestLabel.Name = "AreaOfInterestLabel";
+            this.AreaOfInterestLabel.Size = new System.Drawing.Size(84, 13);
+            this.AreaOfInterestLabel.TabIndex = 14;
+            this.AreaOfInterestLabel.Text = "Areas de Interés";
+            this.AreaOfInterestLabel.Click += new System.EventHandler(this.label1_Click_1);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AreaOfInterestLabel);
+            this.Controls.Add(this.AreaOfInterestTextBox);
+            this.Controls.Add(this.AlertedTickBox);
             this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.EmailLabel);
@@ -167,6 +201,7 @@
             this.Controls.Add(this.button1);
             this.Name = "RegisterForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +221,8 @@
         private System.Windows.Forms.Label EmailLabel;
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.Button RegisterButton;
+        private System.Windows.Forms.CheckBox AlertedTickBox;
+        private System.Windows.Forms.TextBox AreaOfInterestTextBox;
+        private System.Windows.Forms.Label AreaOfInterestLabel;
     }
 }

@@ -146,6 +146,9 @@ namespace Magazine.Services
             }
 
         }
+
+
+
         public void Login(string Login, string Password) {
 
             if (Login == "")
@@ -164,10 +167,8 @@ namespace Magazine.Services
             }
             catch (Exception)
             {
-                Console.WriteLine("A");
+            //?
             }
-
-            
 
             
 
