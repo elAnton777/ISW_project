@@ -41,6 +41,8 @@ namespace IGUMagazine
             this.Close();
         }
 
+         /// ////
+
         private void UserError_Click(object sender, EventArgs e)
         {
 
