@@ -15,11 +15,10 @@ namespace IGUMagazine
     public partial class LoginForm : Form
     {
 
-        MagazineService service = new MagazineService(new EntityFrameworkDAL(new MagazineDbContext()));
+        public static MagazineService service = new MagazineService(new EntityFrameworkDAL(new MagazineDbContext()));
         public LoginForm()
         { 
             InitializeComponent();
-            this.service = service;
             service.DBInitialization();
             
         }
