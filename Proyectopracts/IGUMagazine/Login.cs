@@ -19,6 +19,7 @@ namespace IGUMagazine
         {
             InitializeComponent();
             this.service = service;
+            
         }
 
 
@@ -32,5 +33,9 @@ namespace IGUMagazine
 
         }
 
+        private void BotonInicio_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
