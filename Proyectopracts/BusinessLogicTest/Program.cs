@@ -120,14 +120,20 @@ namespace BusinessLogicTest
 
         }
 
-        /* void RegisterTest()
+       /*  void RegisterTest()
          {
              Console.WriteLine();
              Console.WriteLine("Testing register...");
 
              try
              {
-                 service.Register(user);
+                User u1 = new User("1234", "Pepe", "TheBoss", false, "ninguna", "ptheboss@gmail.com", "theboss", "1234");
+                service.Register(u1);
+
+                if (dal.GetById<User>(u1.Id) != null)
+                {
+
+                }
              }
          }*/
 
@@ -154,6 +160,17 @@ namespace BusinessLogicTest
             catch (Exception e)
             {
                 printError(e);
+            }
+        }
+
+        void EvaluatePaperTest()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Testing EvaluationPaper...");
+
+            try
+            {
+                service.EvaluatePaper(true, "comentario", DateTime.Now.Date, 1);
             }
         }
 

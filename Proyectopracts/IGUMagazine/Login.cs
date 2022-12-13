@@ -30,7 +30,7 @@ namespace IGUMagazine
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            PasswordTextBox.PasswordChar = '*';
         }
 
         private void BotonInicio_Click(object sender, EventArgs e)
