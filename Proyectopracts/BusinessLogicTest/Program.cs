@@ -163,16 +163,16 @@ namespace BusinessLogicTest
             }
         }
 
-        void EvaluatePaperTest()
-        {
-            Console.WriteLine();
-            Console.WriteLine("Testing EvaluationPaper...");
+        //void EvaluatePaperTest()
+        //{
+        //    Console.WriteLine();
+        //    Console.WriteLine("Testing EvaluationPaper...");
 
-            try
-            {
-                service.EvaluatePaper(true, "comentario", DateTime.Now.Date, 1);
-            }
-        }
+        //    try
+        //    {
+        //        service.EvaluatePaper(true, "comentario", DateTime.Now.Date, 1);
+        //    }
+        //}
 
         // A partir de aquí vuestras pruebas
 

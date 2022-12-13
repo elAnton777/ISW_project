@@ -24,7 +24,7 @@ namespace Magazine.Services
         // A partir de aquí cread los vuestros
         // void AddUser(User u);
 
-        string Login(string Login, string Password);
+        void Login(string Login, string Password);
         void Register(User user);
         void Logout();
         User UserLogged();

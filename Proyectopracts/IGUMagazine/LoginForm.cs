@@ -1,0 +1,91 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Magazine.Persistence;
+using Magazine.Services;
+
+namespace IGUMagazine
+{
+    public partial class LoginForm : Form
+    {
+
+        MagazineService service = new MagazineService(new EntityFrameworkDAL(new MagazineDbContext()));
+        public LoginForm()
+        { 
+            InitializeComponent();
+            this.service = service;
+            service.DBInitialization();
+            
+        }
+
+
+        private void UserTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordTextBox_TextChanged(object sender, EventArgs e)
+        {
+            PasswordTextBox.PasswordChar = '*';
+        }
+
+        private void BotonInicio_Click(object sender, EventArgs e)
+        {
+            //Registrarse reg = new Registrarse();
+            //this.Hide();
+            //reg.ShowDialog();
+            //this.Close();
+            Console.WriteLine(UserTextBox.Text);
+            try
+            {
+                service.Login(UserTextBox.Text, PasswordTextBox.Text);
+
+                MagazineForm magazineform = new MagazineForm();
+                this.Hide();
+                magazineform.ShowDialog();
+            }
+            catch (ServiceException ex) {
+                switch(ex.Message)
+                {
+                    case "Introduzca un usuario":   
+                        UserError.Text = ex.Message;
+                        UserError.Visible = true;
+                        break;
+                    case "Introduzca una contraseña":
+                        PasswordError.Text = ex.Message;
+                        PasswordError.Visible= true;
+                        break;
+                    case "El usuario no existe":
+                        UserError.Text = ex.Message;
+                        UserError.Visible = true;
+                        break;
+                    case "La contraseña es incorrecta":
+                        PasswordError.Text = ex.Message;
+                        PasswordError.Visible = true;
+                        break;
+                }
+                
+            }
+
+            
+            
+
+        }
+
+        private void UserError_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordError_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

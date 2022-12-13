@@ -57,6 +57,7 @@ namespace Magazine.Services
             AddUser(u4);
         }
 
+        
         public void AddPerson(Person person)
         {
             // Restricción: No puede haber dos personas con el mismo DNI
@@ -134,7 +135,7 @@ namespace Magazine.Services
         }
 
 
-        void Register(User user) {
+        public void Register(User user) {
             if (dal.GetById<User>(user.Id) == null)
             {
                 dal.Insert<User>(user);
@@ -145,19 +146,30 @@ namespace Magazine.Services
             }
 
         }
-        void Login(string Login, string Password) {
+        public void Login(string Login, string Password) {
 
-            if (Login == null)
+            if (Login == "")
             {
                 throw new ServiceException("Introduzca un usuario");
             }
-            if (Password == null)
+            if (Password == "")
             {
                 throw new ServiceException("Introduzca una contraseña");
             }
 
             //user = dal.GetWhere<User>(x => x.Login).First();
-            user = dal.GetWhere<User>(x => x.Login == Login).First();
+            try
+            {
+                user = dal.GetWhere<User>(x => x.Login == Login).First();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("A");
+            }
+
+            
+
+            
 
             if (user == null)
             {
@@ -275,11 +287,6 @@ namespace Magazine.Services
             {
                 throw new ServiceException("No se han encontrado articulos");
             }
-        }
-
-        string IMagazineService.Login(string Login, string Password)
-        {
-            throw new NotImplementedException();
         }
 
         void IMagazineService.Register(User user)
