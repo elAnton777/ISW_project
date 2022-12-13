@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace IGUMagazine
 {
-    public partial class Registrarse : Form
+    public partial class MagazineForm : Form
     {
-        public Registrarse()
+        public MagazineForm()
         {
             InitializeComponent();
+        }
+
+        private void MagazineForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
