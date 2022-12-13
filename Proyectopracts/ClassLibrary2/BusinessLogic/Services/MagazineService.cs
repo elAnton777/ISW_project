@@ -136,13 +136,10 @@ namespace Magazine.Services
 
 
         public void Register(User user) {
-
-            user.Id = ;
             if (dal.GetById<User>(user.Id) == null)
             {
                 dal.Insert<User>(user);
                 dal.Commit();
-
             }
             else {
                 throw new ServiceException("El usuario ya existe");
