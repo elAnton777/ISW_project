@@ -37,5 +37,15 @@ namespace IGUMagazine
         {
             
         }
+
+        private void UserError_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordError_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

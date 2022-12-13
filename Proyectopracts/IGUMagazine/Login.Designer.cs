@@ -107,6 +107,8 @@
             this.UserError.Size = new System.Drawing.Size(102, 16);
             this.UserError.TabIndex = 6;
             this.UserError.Text = "Error de usuario";
+            this.UserError.Visible = false;
+            this.UserError.Click += new System.EventHandler(this.UserError_Click);
             // 
             // PasswordError
             // 
@@ -118,6 +120,8 @@
             this.PasswordError.Size = new System.Drawing.Size(125, 16);
             this.PasswordError.TabIndex = 7;
             this.PasswordError.Text = "Error de contraseña";
+            this.PasswordError.Visible = false;
+            this.PasswordError.Click += new System.EventHandler(this.PasswordError_Click);
             // 
             // Login
             // 
