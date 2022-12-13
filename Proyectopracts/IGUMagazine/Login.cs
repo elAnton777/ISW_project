@@ -35,7 +35,10 @@ namespace IGUMagazine
 
         private void BotonInicio_Click(object sender, EventArgs e)
         {
-            
+            Registrarse reg = new Registrarse();
+            this.Hide();
+            reg.ShowDialog();
+            this.Close();
         }
 
         private void UserError_Click(object sender, EventArgs e)
