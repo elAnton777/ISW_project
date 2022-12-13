@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace IGUMagazine
 {
-    public partial class Registrarse : Form
+    public partial class RegisterForm : Form
     {
-        public Registrarse()
+        public RegisterForm()
         {
             InitializeComponent();
+        }
+
+        private void back_button_click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

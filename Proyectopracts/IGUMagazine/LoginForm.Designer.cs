@@ -36,6 +36,7 @@
             this.BotonInicio = new System.Windows.Forms.Button();
             this.UserError = new System.Windows.Forms.Label();
             this.PasswordError = new System.Windows.Forms.Label();
+            this.RegisterButton = new System.Windows.Forms.Button();
             LoginLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -94,7 +95,7 @@
             // 
             // BotonInicio
             // 
-            this.BotonInicio.Location = new System.Drawing.Point(273, 302);
+            this.BotonInicio.Location = new System.Drawing.Point(273, 295);
             this.BotonInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonInicio.Name = "BotonInicio";
             this.BotonInicio.Size = new System.Drawing.Size(93, 28);
@@ -131,11 +132,23 @@
             this.PasswordError.Visible = false;
             this.PasswordError.Click += new System.EventHandler(this.PasswordError_Click);
             // 
+            // RegisterButton
+            // 
+            this.RegisterButton.Location = new System.Drawing.Point(273, 327);
+            this.RegisterButton.Margin = new System.Windows.Forms.Padding(2);
+            this.RegisterButton.Name = "RegisterButton";
+            this.RegisterButton.Size = new System.Drawing.Size(93, 28);
+            this.RegisterButton.TabIndex = 8;
+            this.RegisterButton.Text = "Registrarse";
+            this.RegisterButton.UseVisualStyleBackColor = true;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 366);
+            this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.PasswordError);
             this.Controls.Add(this.UserError);
             this.Controls.Add(this.BotonInicio);
@@ -160,6 +173,7 @@
         private System.Windows.Forms.Button BotonInicio;
         private System.Windows.Forms.Label UserError;
         private System.Windows.Forms.Label PasswordError;
+        private System.Windows.Forms.Button RegisterButton;
     }
 }
 

@@ -72,10 +72,6 @@ namespace IGUMagazine
                 }
                 
             }
-
-            
-            
-
         }
 
         private void UserError_Click(object sender, EventArgs e)
@@ -86,6 +82,14 @@ namespace IGUMagazine
         private void PasswordError_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.ShowDialog();
+            this.Show();
         }
     }
 }
