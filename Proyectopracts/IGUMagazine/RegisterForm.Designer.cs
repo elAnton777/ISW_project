@@ -85,7 +85,7 @@
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(196, 227);
+            this.PasswordTextBox.Location = new System.Drawing.Point(327, 118);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(100, 20);
@@ -134,7 +134,7 @@
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Location = new System.Drawing.Point(196, 211);
+            this.PasswordLabel.Location = new System.Drawing.Point(324, 102);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(61, 13);
             this.PasswordLabel.TabIndex = 10;
@@ -177,7 +177,7 @@
             this.AreaOfInterestLabel.Size = new System.Drawing.Size(84, 13);
             this.AreaOfInterestLabel.TabIndex = 14;
             this.AreaOfInterestLabel.Text = "Areas de Interés";
-            this.AreaOfInterestLabel.Click += new System.EventHandler(this.label1_Click_1);
+            this.AreaOfInterestLabel.Click += new System.EventHandler(this.label6_Click_1);
             // 
             // RegisterForm
             // 
