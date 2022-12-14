@@ -56,11 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MagazineForm.cs">
+    <Compile Include="MagazineUForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MagazineForm.Designer.cs">
-      <DependentUpon>MagazineForm.cs</DependentUpon>
+    <Compile Include="MagazineUForm.Designer.cs">
+      <DependentUpon>MagazineUForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -79,8 +79,8 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MagazineForm.resx">
-      <DependentUpon>MagazineForm.cs</DependentUpon>
+    <EmbeddedResource Include="MagazineUForm.resx">
+      <DependentUpon>MagazineUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -58,7 +58,7 @@
             // UserTextBox
             // 
             this.UserTextBox.Location = new System.Drawing.Point(60, 136);
-            this.UserTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UserTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.UserTextBox.Name = "UserTextBox";
             this.UserTextBox.Size = new System.Drawing.Size(98, 20);
             this.UserTextBox.TabIndex = 1;
@@ -67,7 +67,7 @@
             // PasswordTextBox
             // 
             this.PasswordTextBox.Location = new System.Drawing.Point(60, 250);
-            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(98, 20);
             this.PasswordTextBox.TabIndex = 2;
@@ -76,7 +76,7 @@
             // UserLabel
             // 
             this.UserLabel.AutoSize = true;
-            this.UserLabel.Location = new System.Drawing.Point(58, 104);
+            this.UserLabel.Location = new System.Drawing.Point(58, 112);
             this.UserLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UserLabel.Name = "UserLabel";
             this.UserLabel.Size = new System.Drawing.Size(43, 13);
@@ -86,7 +86,7 @@
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Location = new System.Drawing.Point(58, 210);
+            this.PasswordLabel.Location = new System.Drawing.Point(58, 224);
             this.PasswordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(61, 13);
@@ -96,7 +96,7 @@
             // BotonInicio
             // 
             this.BotonInicio.Location = new System.Drawing.Point(273, 295);
-            this.BotonInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonInicio.Margin = new System.Windows.Forms.Padding(2);
             this.BotonInicio.Name = "BotonInicio";
             this.BotonInicio.Size = new System.Drawing.Size(93, 28);
             this.BotonInicio.TabIndex = 5;
@@ -109,7 +109,7 @@
             this.UserError.AutoSize = true;
             this.UserError.BackColor = System.Drawing.SystemColors.Control;
             this.UserError.ForeColor = System.Drawing.Color.Firebrick;
-            this.UserError.Location = new System.Drawing.Point(60, 175);
+            this.UserError.Location = new System.Drawing.Point(58, 158);
             this.UserError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UserError.Name = "UserError";
             this.UserError.Size = new System.Drawing.Size(81, 13);
@@ -123,7 +123,7 @@
             this.PasswordError.AutoSize = true;
             this.PasswordError.BackColor = System.Drawing.SystemColors.Control;
             this.PasswordError.ForeColor = System.Drawing.Color.Firebrick;
-            this.PasswordError.Location = new System.Drawing.Point(58, 284);
+            this.PasswordError.Location = new System.Drawing.Point(58, 272);
             this.PasswordError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PasswordError.Name = "PasswordError";
             this.PasswordError.Size = new System.Drawing.Size(100, 13);
@@ -157,9 +157,10 @@
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.UserTextBox);
             this.Controls.Add(LoginLabel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
