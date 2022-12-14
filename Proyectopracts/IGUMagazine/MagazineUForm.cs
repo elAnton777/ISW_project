@@ -20,6 +20,7 @@ namespace IGUMagazine
             textBox3.Hide();
             textBox4.Hide();
             textBox5.Hide();
+            button2.Enabled = false;
         }
 
         private void MagazineForm_Load(object sender, EventArgs e)
@@ -36,30 +37,36 @@ namespace IGUMagazine
         {
 
         }
-        int count = 0;
+        int count = 1;
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            if(count >= 4)
+            switch (count)
             {
-                count = 3;
+                case 1:
+                    textBox2.Show();
+                    button2.Enabled = true;
+                    count++;
+                    break;
+
+                case 2:
+                    textBox3.Show();
+                    count++;
+                    break;
+
+                case 3:
+                    textBox4.Show();
+                    count++;
+                    break;
+
+                case 4:
+                    textBox5.Show();
+                    button1.Enabled = false;
+                    count++;
+                    break;
+
             }
-            count++;
-            if (count == 1)
-            {
-                textBox2.Show();
-            }
-            if (count == 2)
-            {
-                textBox3.Show();
-            }
-            if (count == 3)
-            {
-                textBox4.Show();
-            }
-            if (count == 4)
-            {
-                textBox5.Show();
-            }
+           
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -74,33 +81,38 @@ namespace IGUMagazine
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (count != 0)
+
+            switch (count)
             {
-                if (count == 1)
-                {
+                case 2:
                     textBox2.Hide();
                     textBox2.Clear();
+                    button2.Enabled = false;
                     count--;
-                }
-                if (count == 2)
-                {
+                    break;
+
+                case 3:
                     textBox3.Hide();
                     textBox3.Clear();
                     count--;
-                }
-                if (count == 3)
-                {
+                    break;
+
+                case 4:
                     textBox4.Hide();
                     textBox4.Clear();
                     count--;
-                }
-                if (count == 4)
-                {
+                    break;
+
+                case 5:
                     textBox5.Hide();
                     textBox5.Clear();
+                    button1.Enabled = true;
                     count--;
-                }
+                    break;
+
+                
             }
+          
         }
 
         private void label3_Click(object sender, EventArgs e)
