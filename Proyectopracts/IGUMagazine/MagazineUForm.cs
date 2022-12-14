@@ -16,11 +16,11 @@ namespace IGUMagazine
         public MagazineUForm()
         {
             InitializeComponent();
-            textBox2.Hide();
-            textBox3.Hide();
-            textBox4.Hide();
-            textBox5.Hide();
-            button2.Enabled = false;
+            autor1.Hide();
+            autor2.Hide();
+            autor3.Hide();
+            autor4.Hide();
+            Subbutton2.Enabled = false;
         }
 
         private void MagazineForm_Load(object sender, EventArgs e)
@@ -44,24 +44,24 @@ namespace IGUMagazine
             switch (count)
             {
                 case 1:
-                    textBox2.Show();
-                    button2.Enabled = true;
+                    autor1.Show();
+                    Subbutton2.Enabled = true;
                     count++;
                     break;
 
                 case 2:
-                    textBox3.Show();
+                    autor2.Show();
                     count++;
                     break;
 
                 case 3:
-                    textBox4.Show();
+                    autor3.Show();
                     count++;
                     break;
 
                 case 4:
-                    textBox5.Show();
-                    button1.Enabled = false;
+                    autor4.Show();
+                    Addbutton.Enabled = false;
                     count++;
                     break;
 
@@ -85,28 +85,28 @@ namespace IGUMagazine
             switch (count)
             {
                 case 2:
-                    textBox2.Hide();
-                    textBox2.Clear();
-                    button2.Enabled = false;
+                    autor1.Hide();
+                    autor1.Clear();
+                    Subbutton2.Enabled = false;
                     count--;
                     break;
 
                 case 3:
-                    textBox3.Hide();
-                    textBox3.Clear();
+                    autor2.Hide();
+                    autor2.Clear();
                     count--;
                     break;
 
                 case 4:
-                    textBox4.Hide();
-                    textBox4.Clear();
+                    autor3.Hide();
+                    autor3.Clear();
                     count--;
                     break;
 
                 case 5:
-                    textBox5.Hide();
-                    textBox5.Clear();
-                    button1.Enabled = true;
+                    autor4.Hide();
+                    autor4.Clear();
+                    Addbutton.Enabled = true;
                     count--;
                     break;
 

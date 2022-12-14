@@ -30,17 +30,17 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.titulo_txt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.autor1 = new System.Windows.Forms.TextBox();
+            this.autor2 = new System.Windows.Forms.TextBox();
+            this.autor3 = new System.Windows.Forms.TextBox();
+            this.autor4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.Addbutton = new System.Windows.Forms.Button();
+            this.Subbutton2 = new System.Windows.Forms.Button();
+            this.Send_Button = new System.Windows.Forms.Button();
+            this.Area_txt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -66,12 +66,12 @@
             this.label2.Text = "Nueva Contribucíon";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // titulo_txt
             // 
-            this.textBox1.Location = new System.Drawing.Point(62, 265);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.titulo_txt.Location = new System.Drawing.Point(62, 265);
+            this.titulo_txt.Name = "titulo_txt";
+            this.titulo_txt.Size = new System.Drawing.Size(100, 20);
+            this.titulo_txt.TabIndex = 2;
             // 
             // label3
             // 
@@ -83,36 +83,36 @@
             this.label3.Text = "Título";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox2
+            // autor1
             // 
-            this.textBox2.Location = new System.Drawing.Point(271, 213);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.autor1.Location = new System.Drawing.Point(271, 213);
+            this.autor1.Name = "autor1";
+            this.autor1.Size = new System.Drawing.Size(100, 20);
+            this.autor1.TabIndex = 4;
+            this.autor1.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // autor2
             // 
-            this.textBox3.Location = new System.Drawing.Point(271, 239);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.autor2.Location = new System.Drawing.Point(271, 239);
+            this.autor2.Name = "autor2";
+            this.autor2.Size = new System.Drawing.Size(100, 20);
+            this.autor2.TabIndex = 5;
+            this.autor2.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox4
+            // autor3
             // 
-            this.textBox4.Location = new System.Drawing.Point(271, 265);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 6;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.autor3.Location = new System.Drawing.Point(271, 265);
+            this.autor3.Name = "autor3";
+            this.autor3.Size = new System.Drawing.Size(100, 20);
+            this.autor3.TabIndex = 6;
+            this.autor3.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox5
+            // autor4
             // 
-            this.textBox5.Location = new System.Drawing.Point(271, 291);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 7;
+            this.autor4.Location = new System.Drawing.Point(271, 291);
+            this.autor4.Name = "autor4";
+            this.autor4.Size = new System.Drawing.Size(100, 20);
+            this.autor4.TabIndex = 7;
             // 
             // label4
             // 
@@ -123,41 +123,41 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Colaboradores";
             // 
-            // button1
+            // Addbutton
             // 
-            this.button1.Location = new System.Drawing.Point(350, 187);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(20, 20);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Addbutton.Location = new System.Drawing.Point(350, 187);
+            this.Addbutton.Name = "Addbutton";
+            this.Addbutton.Size = new System.Drawing.Size(20, 20);
+            this.Addbutton.TabIndex = 9;
+            this.Addbutton.Text = "+";
+            this.Addbutton.UseVisualStyleBackColor = true;
+            this.Addbutton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // Subbutton2
             // 
-            this.button2.Location = new System.Drawing.Point(376, 187);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(20, 20);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Subbutton2.Location = new System.Drawing.Point(376, 187);
+            this.Subbutton2.Name = "Subbutton2";
+            this.Subbutton2.Size = new System.Drawing.Size(20, 20);
+            this.Subbutton2.TabIndex = 10;
+            this.Subbutton2.Text = "-";
+            this.Subbutton2.UseVisualStyleBackColor = true;
+            this.Subbutton2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // Send_Button
             // 
-            this.button3.Location = new System.Drawing.Point(274, 347);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Enviar ";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Send_Button.Location = new System.Drawing.Point(274, 347);
+            this.Send_Button.Name = "Send_Button";
+            this.Send_Button.Size = new System.Drawing.Size(75, 23);
+            this.Send_Button.TabIndex = 11;
+            this.Send_Button.Text = "Enviar ";
+            this.Send_Button.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // Area_txt
             // 
-            this.textBox6.Location = new System.Drawing.Point(63, 213);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 12;
+            this.Area_txt.Location = new System.Drawing.Point(63, 213);
+            this.Area_txt.Name = "Area_txt";
+            this.Area_txt.Size = new System.Drawing.Size(100, 20);
+            this.Area_txt.TabIndex = 12;
             // 
             // label5
             // 
@@ -174,17 +174,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(513, 450);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Area_txt);
+            this.Controls.Add(this.Send_Button);
+            this.Controls.Add(this.Subbutton2);
+            this.Controls.Add(this.Addbutton);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.autor4);
+            this.Controls.Add(this.autor3);
+            this.Controls.Add(this.autor2);
+            this.Controls.Add(this.autor1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.titulo_txt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "MagazineUForm";
@@ -199,17 +199,17 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox titulo_txt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox autor1;
+        private System.Windows.Forms.TextBox autor2;
+        private System.Windows.Forms.TextBox autor3;
+        private System.Windows.Forms.TextBox autor4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button Addbutton;
+        private System.Windows.Forms.Button Subbutton2;
+        private System.Windows.Forms.Button Send_Button;
+        private System.Windows.Forms.TextBox Area_txt;
         private System.Windows.Forms.Label label5;
     }
 }
