@@ -59,7 +59,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(60, 80);
+            this.label2.Location = new System.Drawing.Point(59, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 17);
             this.label2.TabIndex = 1;
@@ -105,6 +105,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 6;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox5
             // 

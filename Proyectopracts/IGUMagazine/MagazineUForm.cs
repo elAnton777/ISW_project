@@ -36,10 +36,13 @@ namespace IGUMagazine
         {
 
         }
-        bool hidden = false;
         int count = 0;
         private void button1_Click(object sender, EventArgs e)
         {
+            if(count >= 4)
+            {
+                count = 3;
+            }
             count++;
             if (count == 1)
             {
@@ -101,6 +104,11 @@ namespace IGUMagazine
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }
