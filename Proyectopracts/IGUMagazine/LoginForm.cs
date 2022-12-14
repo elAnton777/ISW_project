@@ -40,7 +40,7 @@ namespace IGUMagazine
             {
                 service.Login(UserTextBox.Text, PasswordTextBox.Text);
 
-                MagazineForm magazineform = new MagazineForm();
+                MagazineUForm magazineform = new MagazineUForm();
                 this.Hide();
                 magazineform.ShowDialog();
             }
