@@ -328,5 +328,10 @@ namespace IGUMagazine
         {
 
         }
+
+        private void GoBackButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

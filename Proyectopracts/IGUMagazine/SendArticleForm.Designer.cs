@@ -49,6 +49,7 @@
             this.CoAuthor2Button = new System.Windows.Forms.Button();
             this.CoAuthor3Button = new System.Windows.Forms.Button();
             this.CoAuthor4Button = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -254,11 +255,22 @@
             this.CoAuthor4Button.Visible = false;
             this.CoAuthor4Button.Click += new System.EventHandler(this.CoAuthor4Button_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 23);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "GoBackButton";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.GoBackButton_Click);
+            // 
             // SendArticleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.CoAuthor4Button);
             this.Controls.Add(this.CoAuthor3Button);
             this.Controls.Add(this.CoAuthor2Button);
@@ -310,5 +322,6 @@
         private System.Windows.Forms.Button CoAuthor2Button;
         private System.Windows.Forms.Button CoAuthor3Button;
         private System.Windows.Forms.Button CoAuthor4Button;
+        private System.Windows.Forms.Button button1;
     }
 }

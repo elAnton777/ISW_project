@@ -22,6 +22,7 @@ namespace IGUMagazine
             this.Hide();
             SendArticleForm sendArticleForm= new SendArticleForm();
             sendArticleForm.ShowDialog();
+            this.Show();
         }
 
         private void EvaluarArticulo_Click(object sender, EventArgs e)
@@ -43,6 +44,11 @@ namespace IGUMagazine
             this.Hide();
             ConfeccionarEjemplar confeccionarEjemplar = new ConfeccionarEjemplar();
             confeccionarEjemplar.ShowDialog();
+        }
+
+        private void GoBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

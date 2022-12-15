@@ -29,9 +29,9 @@ namespace IGUMagazine
             {
                 service.Login(UserTextBox.Text, PasswordTextBox.Text);
 
-                SendArticleForm magazineform = new SendArticleForm();
+                SelectActionForm selectActionForm = new SelectActionForm();
                 this.Hide();
-                magazineform.ShowDialog();
+                selectActionForm.ShowDialog();
                 this.Close();
             }
             catch (ServiceException ex) {
