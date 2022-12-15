@@ -89,7 +89,7 @@ namespace IGUMagazine
         {
 
         }
-
+        List<Person> CoAuthors = new List<Magazine.Entities.Person>();
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -202,11 +202,6 @@ namespace IGUMagazine
             try {
                 DateTime CurrentDate = DateTime.Now;
                 Magazine.Entities.User ResponsableUser = LoginForm.service.UserLogged();
-                List<Person> CoAuthors = new List<Magazine.Entities.Person>();
-                for(int i = count; i > 0; i--) {
-                    LoginForm.service.AddPerson(new Person("1234", CoAuthorTextBoxName1.Text, CoAuthorTextBoxSurName1.Text));
-
-                }
                 //LoginForm.service.AddPaper(new Magazine.Entities.Paper(TitleTextBox.Text, new DateTime().Now(), area, LoginForm.service.UserLogged()));
             } catch (ServiceException ex) { 
                 

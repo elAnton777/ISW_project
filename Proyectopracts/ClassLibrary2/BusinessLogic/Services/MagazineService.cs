@@ -292,11 +292,6 @@ namespace Magazine.Services
             }
         }
 
-        void IMagazineService.Register(User user)
-        {
-            throw new NotImplementedException();
-        }
-
         void IMagazineService.Logout()
         {
             user = null;
