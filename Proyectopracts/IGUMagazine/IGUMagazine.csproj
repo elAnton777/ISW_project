@@ -88,11 +88,11 @@
     <Compile Include="MagazineJefeForm.Designer.cs">
       <DependentUpon>MagazineJefeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MagazineUserForm.cs">
+    <Compile Include="SendArticleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MagazineUserForm.Designer.cs">
-      <DependentUpon>MagazineUserForm.cs</DependentUpon>
+    <Compile Include="SendArticleForm.Designer.cs">
+      <DependentUpon>SendArticleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -120,8 +120,8 @@
     <EmbeddedResource Include="MagazineResponsableForm.resx">
       <DependentUpon>MagazineResponsableForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MagazineUserForm.resx">
-      <DependentUpon>MagazineUserForm.cs</DependentUpon>
+    <EmbeddedResource Include="SendArticleForm.resx">
+      <DependentUpon>SendArticleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

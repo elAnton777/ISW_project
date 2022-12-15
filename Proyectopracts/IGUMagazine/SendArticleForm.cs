@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Magazine.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,13 +14,15 @@ namespace IGUMagazine
 {
     public partial class MagazineUserForm : Form
     {
+
+
         public MagazineUserForm()
         {
             InitializeComponent();
            // autor1.Hide();
-            autor2.Hide();
-            autor3.Hide();
-            autor4.Hide();
+            CoAuthorTextBox2.Hide();
+            CoAutorTextBox3.Hide();
+            CoAutorTextBox4.Hide();
             Subbutton.Enabled = false;
         }
 
@@ -50,18 +53,18 @@ namespace IGUMagazine
                     break;*/
 
                 case 2:
-                    autor2.Show();
+                    CoAuthorTextBox2.Show();
                     Subbutton.Enabled = true;
                     count++;
                     break;
 
                 case 3:
-                    autor3.Show();
+                    CoAutorTextBox3.Show();
                     count++;
                     break;
 
                 case 4:
-                    autor4.Show();
+                    CoAutorTextBox4.Show();
                     Addbutton.Enabled = false;
                     count++;
                     break;
@@ -86,27 +89,27 @@ namespace IGUMagazine
             switch (count)
             {
                 case 2:
-                    autor1.Hide();
-                    autor1.Clear();
+                    CoAuthorTextBox1.Hide();
+                    CoAuthorTextBox1.Clear();
                     count--;
                     break;
 
                 case 3:
-                    autor2.Hide();
-                    autor2.Clear();
+                    CoAuthorTextBox2.Hide();
+                    CoAuthorTextBox2.Clear();
                    Subbutton.Enabled = false;
                     count--;
                     break;
 
                 case 4:
-                    autor3.Hide();
-                    autor3.Clear();
+                    CoAutorTextBox3.Hide();
+                    CoAutorTextBox3.Clear();
                     count--;
                     break;
 
                 case 5:
-                    autor4.Hide();
-                    autor4.Clear();
+                    CoAutorTextBox4.Hide();
+                    CoAutorTextBox4.Clear();
                     Addbutton.Enabled = true;
                     count--;
                     break;
@@ -124,6 +127,65 @@ namespace IGUMagazine
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Area_txt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private Magazine.Entities.Area area;
+        private void AreaTextBoxLeave(object sender, EventArgs e)
+        {
+            if (AreaTextBox.Text != "") {
+                try
+                {
+                    area = LoginForm.service.FindAreaByName(AreaTextBox.Text);
+                    TitleTextBox.ReadOnly = false;
+                    AreaTextBox.ReadOnly = true;
+
+                }
+                catch (ServiceException)
+                {
+
+                }
+            }
+
+            
+        }
+
+        private void titulo_txt_TextChanged(object sender, EventArgs e)
+        {
+            if (TitleTextBox.Text != "")
+            {
+                Send_Button.Enabled = true;
+            }
+            else { 
+                Send_Button.Enabled = false;
+            }
+        }
+
+        private void Send_Button_Click(object sender, EventArgs e)
+        {
+            try {
+                DateTime CurrentDate = DateTime.Now;
+                Magazine.Entities.User ResponsableUser = LoginForm.service.UserLogged();
+
+
+                //LoginForm.service.AddPaper(new Magazine.Entities.Paper(TitleTextBox.Text, new DateTime().Now(), area, LoginForm.service.UserLogged()));
+            } catch (ServiceException ex) { 
+                
+            }
+            
+
+        }
+
+        private void EditAreaDoubleClick(object sender, EventArgs e)
+        {
+            if (AreaTextBox.ReadOnly == true) {
+                AreaTextBox.ReadOnly = false;
+                TitleTextBox.ReadOnly = true;
+            }
         }
     }
 }
