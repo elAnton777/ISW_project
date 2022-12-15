@@ -262,7 +262,12 @@ namespace Magazine.Services
             }
         }
 
-        void EvaluatePaper(bool accepted, string comments, DateTime date, int paperId) {
+        public void AddPendingEvaluatePaperToArea(Area area, Paper paper) {
+            area.EvaluationPending.Add(paper);
+            dal.Commit();
+        }
+
+        public void EvaluatePaper(bool accepted, string comments, DateTime date, int paperId) {
             Paper paper = dal.GetById<Paper>(paperId);
 
             if (paper != null) {

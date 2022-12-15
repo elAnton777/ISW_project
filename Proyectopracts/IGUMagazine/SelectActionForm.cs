@@ -30,6 +30,7 @@ namespace IGUMagazine
             this.Hide();
             EvaluarArticuloForm evaluarArticuloForm = new EvaluarArticuloForm();
             evaluarArticuloForm.ShowDialog();
+            this.Show();
         }
 
         private void ListadoDeArticulos_Click(object sender, EventArgs e)
@@ -37,6 +38,7 @@ namespace IGUMagazine
             this.Hide();
             ListaArticulos listaArticulos = new ListaArticulos();
             listaArticulos.ShowDialog();
+            this.Show();
         }
 
         private void ConfeccionarEjemplar_Click(object sender, EventArgs e)
@@ -44,6 +46,7 @@ namespace IGUMagazine
             this.Hide();
             ConfeccionarEjemplar confeccionarEjemplar = new ConfeccionarEjemplar();
             confeccionarEjemplar.ShowDialog();
+            this.Show();
         }
 
         private void GoBack_Click(object sender, EventArgs e)

@@ -315,6 +315,7 @@ namespace IGUMagazine
                 }
                 Console.WriteLine(paper.ToString());
                 LoginForm.service.AddPaper(paper);
+                LoginForm.service.AddPendingEvaluatePaperToArea(area, paper);
             }
             catch (ServiceException ex)
             {
