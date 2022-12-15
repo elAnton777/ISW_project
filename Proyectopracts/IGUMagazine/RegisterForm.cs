@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
@@ -61,8 +62,39 @@ namespace IGUMagazine
                 LoginForm.service.Register(_user);
 
             }
-            catch (ServiceException) {
+            catch (ServiceException ex) {
                 //DoSomething
+                switch (ex.Message)
+                {
+                    case "Introduzca un usuario":
+                        UserError.Text = ex.Message;
+                        UserError.Visible = true;
+                        break;
+                    case "Introduzca una contraseña":
+                        PasswordError.Text = ex.Message;
+                        PasswordError.Visible = true;
+                        break;
+                    case "El usuario ya existe":
+                        UserError.Text = ex.Message;
+                        UserError.Visible = true;
+                        break;
+                    case "Introduzca un correo electrónico":
+                        EmailError.Text = ex.Message;
+                        EmailError.Visible = true;
+                        break;
+                    case "Introduzca una area de interes":
+                        AreaError.Text = ex.Message;
+                        AreaError.Visible = true;
+                        break;
+                    case "Introduzca su nombre":
+                        NameError.Text = ex.Message;
+                        NameError.Visible = true;
+                        break;
+                    case "Introduzca su apellido":
+                        SurnameError.Text = ex.Message;
+                        SurnameError.Visible = true;
+                        break;
+                }
             }
         }
 
@@ -100,6 +132,44 @@ namespace IGUMagazine
 
         }
 
-       
+        private void UsernameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserError_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordError_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmailError_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AreaError_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NameError_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SurnameError_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AreaOfInterestTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

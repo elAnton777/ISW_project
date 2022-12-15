@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IGUMagazine
 {
-    public partial class Form1 : Form
+    public partial class ConfeccionarEjemplar : Form
     {
-        public Form1()
+        public ConfeccionarEjemplar()
         {
             InitializeComponent();
         }

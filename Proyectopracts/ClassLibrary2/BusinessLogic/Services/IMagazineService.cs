@@ -25,7 +25,7 @@ namespace Magazine.Services
         // void AddUser(User u);
 
         void Login(string Login, string Password);
-        void Register(User user);
+        void Register(User user, string Login, string Password, string Name, string Surname, string Email, string Area);
         void Logout();
         User UserLogged();
         void EvaluatePaper(bool accepted, string comments, DateTime date, int paperId);

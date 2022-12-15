@@ -1,6 +1,6 @@
 ﻿namespace IGUMagazine
 {
-    partial class Form1
+    partial class ConfeccionarEjemplar
     {
         /// <summary>
         /// Required designer variable.
