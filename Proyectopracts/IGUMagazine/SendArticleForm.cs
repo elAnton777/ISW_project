@@ -201,7 +201,6 @@ namespace IGUMagazine
             Person person = new Person();
             if (CoAuthorTextBoxName2.ReadOnly == true)
             {
-
                 CoAuthorTextBoxName2.ReadOnly = false;
                 CoAuthorTextBoxSurName2.ReadOnly = false;
 
@@ -215,10 +214,9 @@ namespace IGUMagazine
                 person.Name = CoAuthorTextBoxName2.Text;
                 person.Surname = CoAuthorTextBoxSurName2.Text;
 
-                Console.WriteLine(person.Id + person.Name + " " + person.Surname);
                 try
                 {
-                    //LoginForm.service.AddPerson(person);
+                    LoginForm.service.AddPerson(person);
                     CoAuthorTextBoxName2.ReadOnly = true;
                     CoAuthorTextBoxSurName2.ReadOnly = true;
 
@@ -320,10 +318,7 @@ namespace IGUMagazine
             }
             catch (ServiceException ex)
             {
-                if (ex.Message.StartsWith("El paper")) {
-                    MessageBox.Show(ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
+                MessageBox.Show(ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
