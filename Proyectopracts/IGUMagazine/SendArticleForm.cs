@@ -164,10 +164,8 @@ namespace IGUMagazine
                 }
                 catch (ServiceException ex)
                 {
-                    if (ex.Message.StartsWith("El area con nombre")) 
-                    {
-                        MessageBox.Show(ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show(ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    AreaTextBox.Focus();
                 }
             }
 
