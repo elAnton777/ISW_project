@@ -46,6 +46,10 @@
             this.CoAuthorTextBoxSurName2 = new System.Windows.Forms.TextBox();
             this.CoAuthorTextBoxSurName3 = new System.Windows.Forms.TextBox();
             this.CoAuthorTextBoxSurName4 = new System.Windows.Forms.TextBox();
+            this.CoAuthor2Button = new System.Windows.Forms.Button();
+            this.CoAuthor3Button = new System.Windows.Forms.Button();
+            this.CoAuthor4Button = new System.Windows.Forms.Button();
+            this.CoAuthor1Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -214,11 +218,58 @@
             this.CoAuthorTextBoxSurName4.Visible = false;
             this.CoAuthorTextBoxSurName4.TextChanged += new System.EventHandler(this.CoAutorTextBoxSurName4_TextChanged);
             // 
+            // CoAuthor2Button
+            // 
+            this.CoAuthor2Button.Location = new System.Drawing.Point(483, 237);
+            this.CoAuthor2Button.Name = "CoAuthor2Button";
+            this.CoAuthor2Button.Size = new System.Drawing.Size(26, 23);
+            this.CoAuthor2Button.TabIndex = 19;
+            this.CoAuthor2Button.Text = "✓";
+            this.CoAuthor2Button.UseVisualStyleBackColor = true;
+            this.CoAuthor2Button.Visible = false;
+            this.CoAuthor2Button.Click += new System.EventHandler(this.CoAuthor2Button_Click);
+            // 
+            // CoAuthor3Button
+            // 
+            this.CoAuthor3Button.Location = new System.Drawing.Point(483, 262);
+            this.CoAuthor3Button.Name = "CoAuthor3Button";
+            this.CoAuthor3Button.Size = new System.Drawing.Size(26, 23);
+            this.CoAuthor3Button.TabIndex = 20;
+            this.CoAuthor3Button.Text = "✓";
+            this.CoAuthor3Button.UseVisualStyleBackColor = true;
+            this.CoAuthor3Button.Visible = false;
+            this.CoAuthor3Button.Click += new System.EventHandler(this.CoAuthor3Button_Click);
+            // 
+            // CoAuthor4Button
+            // 
+            this.CoAuthor4Button.Location = new System.Drawing.Point(483, 288);
+            this.CoAuthor4Button.Name = "CoAuthor4Button";
+            this.CoAuthor4Button.Size = new System.Drawing.Size(26, 23);
+            this.CoAuthor4Button.TabIndex = 21;
+            this.CoAuthor4Button.Text = "✓";
+            this.CoAuthor4Button.UseVisualStyleBackColor = true;
+            this.CoAuthor4Button.Visible = false;
+            this.CoAuthor4Button.Click += new System.EventHandler(this.CoAuthor4Button_Click);
+            // 
+            // CoAuthor1Button
+            // 
+            this.CoAuthor1Button.Location = new System.Drawing.Point(483, 213);
+            this.CoAuthor1Button.Name = "CoAuthor1Button";
+            this.CoAuthor1Button.Size = new System.Drawing.Size(26, 23);
+            this.CoAuthor1Button.TabIndex = 18;
+            this.CoAuthor1Button.Text = "✓";
+            this.CoAuthor1Button.UseVisualStyleBackColor = true;
+            this.CoAuthor1Button.Click += new System.EventHandler(this.CoAuthor1Button_Click);
+            // 
             // MagazineUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 450);
+            this.ClientSize = new System.Drawing.Size(607, 450);
+            this.Controls.Add(this.CoAuthor4Button);
+            this.Controls.Add(this.CoAuthor3Button);
+            this.Controls.Add(this.CoAuthor2Button);
+            this.Controls.Add(this.CoAuthor1Button);
             this.Controls.Add(this.CoAuthorTextBoxSurName4);
             this.Controls.Add(this.CoAuthorTextBoxSurName3);
             this.Controls.Add(this.CoAuthorTextBoxSurName2);
@@ -265,5 +316,9 @@
         private System.Windows.Forms.TextBox CoAuthorTextBoxSurName2;
         private System.Windows.Forms.TextBox CoAuthorTextBoxSurName3;
         private System.Windows.Forms.TextBox CoAuthorTextBoxSurName4;
+        private System.Windows.Forms.Button CoAuthor2Button;
+        private System.Windows.Forms.Button CoAuthor3Button;
+        private System.Windows.Forms.Button CoAuthor4Button;
+        private System.Windows.Forms.Button CoAuthor1Button;
     }
 }

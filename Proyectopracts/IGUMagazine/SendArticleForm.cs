@@ -56,6 +56,7 @@ namespace IGUMagazine
                 case 2:
                     CoAuthorTextBoxName2.Show();
                     CoAuthorTextBoxSurName2.Show();
+                    CoAuthor2Button.Show();
                     Subbutton.Enabled = true;
                     count++;
                     break;
@@ -63,12 +64,14 @@ namespace IGUMagazine
                 case 3:
                     CoAuthorTextBoxName3.Show();
                     CoAuthorTextBoxSurName3.Show();
+                    CoAuthor3Button.Show();
                     count++;
                     break;
 
                 case 4:
                     CoAuthorTextBoxName4.Show();
                     CoAuthorTextBoxSurName4.Show();
+                    CoAuthor4Button.Show();
                     Addbutton.Enabled = false;
                     count++;
                     break;
@@ -99,6 +102,8 @@ namespace IGUMagazine
                     CoAuthorTextBoxSurName1.Hide();
                     CoAuthorTextBoxSurName1.Clear();
 
+                    CoAuthor1Button.Hide();
+
                     count--;
                     break;
 
@@ -109,6 +114,8 @@ namespace IGUMagazine
 
                     CoAuthorTextBoxSurName2.Hide();
                     CoAuthorTextBoxSurName2.Clear();
+
+                    CoAuthor2Button.Hide();
 
                     Subbutton.Enabled = false;
                     count--;
@@ -121,6 +128,8 @@ namespace IGUMagazine
                     CoAuthorTextBoxSurName3.Hide();
                     CoAuthorTextBoxSurName3.Clear();
 
+                    CoAuthor3Button.Hide();
+
                     count--;
                     break;
 
@@ -130,6 +139,8 @@ namespace IGUMagazine
 
                     CoAuthorTextBoxSurName4.Hide();
                     CoAuthorTextBoxSurName4.Clear();
+
+                    CoAuthor4Button.Hide();
 
                     Addbutton.Enabled = true;
                     count--;
@@ -192,7 +203,10 @@ namespace IGUMagazine
                 DateTime CurrentDate = DateTime.Now;
                 Magazine.Entities.User ResponsableUser = LoginForm.service.UserLogged();
                 List<Person> CoAuthors = new List<Magazine.Entities.Person>();
+                for(int i = count; i > 0; i--) {
+                    LoginForm.service.AddPerson(new Person("1234", CoAuthorTextBoxName1.Text, CoAuthorTextBoxSurName1.Text));
 
+                }
                 //LoginForm.service.AddPaper(new Magazine.Entities.Paper(TitleTextBox.Text, new DateTime().Now(), area, LoginForm.service.UserLogged()));
             } catch (ServiceException ex) { 
                 
@@ -222,6 +236,76 @@ namespace IGUMagazine
         private void CoAuthorTextBoxSurName3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void CoAuthor1Button_Click(object sender, EventArgs e)
+        {
+            if (CoAuthorTextBoxName1.ReadOnly == true)
+            {
+                CoAuthorTextBoxName1.ReadOnly = false;
+                CoAuthorTextBoxSurName1.ReadOnly = false;
+                CoAuthor1Button.Text = "✓";
+
+            }
+            else
+            {
+                CoAuthorTextBoxName1.ReadOnly = true;
+                CoAuthorTextBoxSurName1.ReadOnly = true;
+                CoAuthor1Button.Text = "✎";
+
+            }
+        }
+
+        private void CoAuthor2Button_Click(object sender, EventArgs e)
+        {
+            if (CoAuthorTextBoxName2.ReadOnly == true){
+                CoAuthorTextBoxName2.ReadOnly = false;
+                CoAuthorTextBoxSurName2.ReadOnly = false;
+                CoAuthor2Button.Text = "✓";
+
+            }
+            else {
+                CoAuthorTextBoxName2.ReadOnly = true;
+                CoAuthorTextBoxSurName2.ReadOnly = true;
+                CoAuthor2Button.Text = "✎";
+
+            }
+        }
+
+        private void CoAuthor3Button_Click(object sender, EventArgs e)
+        {
+            if (CoAuthorTextBoxName3.ReadOnly == true)
+            {
+                CoAuthorTextBoxName3.ReadOnly = false;
+                CoAuthorTextBoxSurName3.ReadOnly = false;
+                CoAuthor3Button.Text = "✓";
+
+            }
+            else
+            {
+                CoAuthorTextBoxName3.ReadOnly = true;
+                CoAuthorTextBoxSurName3.ReadOnly = true;
+                CoAuthor3Button.Text = "✎";
+
+            }
+        }
+
+        private void CoAuthor4Button_Click(object sender, EventArgs e)
+        {
+            if (CoAuthorTextBoxName4.ReadOnly == true)
+            {
+                CoAuthorTextBoxName4.ReadOnly = false;
+                CoAuthorTextBoxSurName4.ReadOnly = false;
+                CoAuthor4Button.Text = "✓";
+
+            }
+            else
+            {
+                CoAuthorTextBoxName4.ReadOnly = true;
+                CoAuthorTextBoxSurName4.ReadOnly = true;
+                CoAuthor4Button.Text = "✎";
+
+            }
         }
     }
 }
