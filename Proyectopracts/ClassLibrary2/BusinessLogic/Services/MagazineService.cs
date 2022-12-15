@@ -150,7 +150,7 @@ namespace Magazine.Services
             if (user.Password == "") throw new ServiceException("Introduzca una contraseña");
 
 
-            if (dal.GetById<User>(user.Id) == null)
+            if (dal.GetById<User>(user.Id) == null || dal.GetWhere<User>(x => x.Login == user.Login) == null || dal.GetWhere<User>(x => x.Email == user.Email) == null)
             {
                 dal.Insert<User>(user);
                 dal.Commit();
