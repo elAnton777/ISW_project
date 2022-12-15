@@ -316,13 +316,15 @@ namespace IGUMagazine
                 Console.WriteLine(paper.ToString());
                 LoginForm.service.AddPaper(paper);
                 LoginForm.service.AddPendingEvaluatePaperToArea(area, paper);
+                this.Close();
             }
             catch (ServiceException ex)
             {
                 MessageBox.Show(ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Show();
             }
 
-
+            
         }
 
         private void CoAuthorTextBoxName4_TextChanged(object sender, EventArgs e)

@@ -114,6 +114,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConfeccionarEjemplar.resx">
+      <DependentUpon>ConfeccionarEjemplar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EvaluarArticuloForm.resx">
       <DependentUpon>EvaluarArticuloForm.cs</DependentUpon>
     </EmbeddedResource>
