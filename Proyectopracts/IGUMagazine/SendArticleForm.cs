@@ -13,11 +13,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace IGUMagazine
 {
-    public partial class MagazineUserForm : Form
+    public partial class SendArticleForm : Form
     {
 
 
-        public MagazineUserForm()
+        public SendArticleForm()
         {
             InitializeComponent();
            // autor1.Hide();

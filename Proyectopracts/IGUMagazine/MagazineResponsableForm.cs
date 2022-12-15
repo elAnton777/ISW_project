@@ -33,7 +33,7 @@ namespace IGUMagazine
         private void enviar_boton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MagazineUserForm magazineuserform = new MagazineUserForm();
+            SendArticleForm magazineuserform = new SendArticleForm();
             magazineuserform.ShowDialog();
             this.Show();
         }

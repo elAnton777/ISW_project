@@ -1,6 +1,6 @@
 ﻿namespace IGUMagazine
 {
-    partial class MagazineUserForm
+    partial class SendArticleForm
     {
         /// <summary>
         /// Required designer variable.
@@ -261,7 +261,7 @@
             this.CoAuthor1Button.UseVisualStyleBackColor = true;
             this.CoAuthor1Button.Click += new System.EventHandler(this.CoAuthor1Button_Click);
             // 
-            // MagazineUserForm
+            // SendArticleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -288,7 +288,7 @@
             this.Controls.Add(this.TitleTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "MagazineUserForm";
+            this.Name = "SendArticleForm";
             this.Text = "+";
             this.Load += new System.EventHandler(this.MagazineForm_Load);
             this.ResumeLayout(false);
