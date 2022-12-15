@@ -63,7 +63,7 @@ namespace IGUMagazine
                 Area area = LoginForm.service.FindAreaByName(AreaSeleccioada);
                 foreach (Paper paper in area.EvaluationPending)
                 {
-                    ArticulosComboBox.Items.Add(paper);
+                    ArticulosComboBox.Items.Add(paper.Title + " ");
                 }
             }
 
