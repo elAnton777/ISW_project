@@ -59,7 +59,7 @@ namespace IGUMagazine
                 string _id = _random.Next(0, 9999).ToString("D4");
 
                 Magazine.Entities.User _user = new Magazine.Entities.User(_id, NameTextBox.Text, SurnameTextBox.Text, AlertedTickBox.Checked, AreaOfInterestTextBox.Text, EmailTextBox.Text, UsernameTextBox.Text, PasswordTextBox.Text);
-                LoginForm.service.Register(_user, string Login, string Password, string Name, string Surname, string Email, string Area);
+                LoginForm.service.Register(_user);
 
             }
             catch (ServiceException ex) {
