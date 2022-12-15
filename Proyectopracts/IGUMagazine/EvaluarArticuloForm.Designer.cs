@@ -41,6 +41,7 @@
             this.CommentsTextBox = new System.Windows.Forms.RichTextBox();
             this.CancelButton = new System.Windows.Forms.Button();
             this.AceptarButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Lista_Articulos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,27 +49,30 @@
             // 
             this.titulo_tag.AutoSize = true;
             this.titulo_tag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.titulo_tag.Location = new System.Drawing.Point(26, 27);
+            this.titulo_tag.Location = new System.Drawing.Point(35, 33);
+            this.titulo_tag.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.titulo_tag.Name = "titulo_tag";
-            this.titulo_tag.Size = new System.Drawing.Size(126, 17);
+            this.titulo_tag.Size = new System.Drawing.Size(160, 22);
             this.titulo_tag.TabIndex = 1;
             this.titulo_tag.Text = "Artículos a Evaluar";
             // 
             // AreasComboBox
             // 
             this.AreasComboBox.FormattingEnabled = true;
-            this.AreasComboBox.Location = new System.Drawing.Point(576, 74);
+            this.AreasComboBox.Location = new System.Drawing.Point(768, 91);
+            this.AreasComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AreasComboBox.Name = "AreasComboBox";
-            this.AreasComboBox.Size = new System.Drawing.Size(121, 21);
+            this.AreasComboBox.Size = new System.Drawing.Size(160, 24);
             this.AreasComboBox.TabIndex = 2;
             this.AreasComboBox.SelectedIndexChanged += new System.EventHandler(this.AreaComboBox_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(573, 58);
+            this.label1.Location = new System.Drawing.Point(764, 71);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.Size = new System.Drawing.Size(43, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Áreas";
             // 
@@ -79,70 +83,83 @@
             this.Título,
             this.Autor,
             this.Fecha_de_envío});
-            this.Lista_Articulos.Location = new System.Drawing.Point(12, 74);
+            this.Lista_Articulos.Location = new System.Drawing.Point(16, 91);
+            this.Lista_Articulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Lista_Articulos.Name = "Lista_Articulos";
-            this.Lista_Articulos.Size = new System.Drawing.Size(406, 150);
+            this.Lista_Articulos.RowHeadersWidth = 51;
+            this.Lista_Articulos.Size = new System.Drawing.Size(541, 185);
             this.Lista_Articulos.TabIndex = 4;
             this.Lista_Articulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // Título
             // 
             this.Título.HeaderText = "Título";
+            this.Título.MinimumWidth = 6;
             this.Título.Name = "Título";
+            this.Título.Width = 125;
             // 
             // Autor
             // 
             this.Autor.HeaderText = "Autor";
+            this.Autor.MinimumWidth = 6;
             this.Autor.Name = "Autor";
+            this.Autor.Width = 125;
             // 
             // Fecha_de_envío
             // 
             this.Fecha_de_envío.HeaderText = "Fecha de Envío";
+            this.Fecha_de_envío.MinimumWidth = 6;
             this.Fecha_de_envío.Name = "Fecha_de_envío";
+            this.Fecha_de_envío.Width = 125;
             // 
             // Articulos
             // 
             this.Articulos.AutoSize = true;
-            this.Articulos.Location = new System.Drawing.Point(573, 111);
+            this.Articulos.Location = new System.Drawing.Point(764, 137);
+            this.Articulos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Articulos.Name = "Articulos";
-            this.Articulos.Size = new System.Drawing.Size(47, 13);
+            this.Articulos.Size = new System.Drawing.Size(58, 16);
             this.Articulos.TabIndex = 5;
-            this.Articulos.Text = "Articulos";
+            this.Articulos.Text = "Artículos";
             this.Articulos.Click += new System.EventHandler(this.label2_Click);
             // 
             // ArticulosComboBox
             // 
             this.ArticulosComboBox.FormattingEnabled = true;
-            this.ArticulosComboBox.Location = new System.Drawing.Point(576, 137);
+            this.ArticulosComboBox.Location = new System.Drawing.Point(768, 169);
+            this.ArticulosComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ArticulosComboBox.Name = "ArticulosComboBox";
-            this.ArticulosComboBox.Size = new System.Drawing.Size(121, 21);
+            this.ArticulosComboBox.Size = new System.Drawing.Size(160, 24);
             this.ArticulosComboBox.TabIndex = 6;
             this.ArticulosComboBox.SelectedIndexChanged += new System.EventHandler(this.ArticulosComboBox_SelectedIndexChanged);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(576, 180);
+            this.checkBox1.Location = new System.Drawing.Point(768, 222);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(121, 17);
+            this.checkBox1.Size = new System.Drawing.Size(240, 25);
             this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "AcceptedCheckBox";
+            this.checkBox1.Text = "¿Quiere aceptar el artículo?";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // CommentsTextBox
             // 
-            this.CommentsTextBox.Location = new System.Drawing.Point(576, 232);
+            this.CommentsTextBox.Location = new System.Drawing.Point(768, 286);
+            this.CommentsTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CommentsTextBox.Name = "CommentsTextBox";
-            this.CommentsTextBox.Size = new System.Drawing.Size(193, 96);
+            this.CommentsTextBox.Size = new System.Drawing.Size(256, 117);
             this.CommentsTextBox.TabIndex = 8;
             this.CommentsTextBox.Text = "";
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(576, 352);
+            this.CancelButton.Location = new System.Drawing.Point(768, 433);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(75, 23);
+            this.CancelButton.Size = new System.Drawing.Size(100, 28);
             this.CancelButton.TabIndex = 9;
             this.CancelButton.Text = "Cancelar";
             this.CancelButton.UseVisualStyleBackColor = true;
@@ -150,19 +167,31 @@
             // 
             // AceptarButton
             // 
-            this.AceptarButton.Location = new System.Drawing.Point(694, 352);
+            this.AceptarButton.Location = new System.Drawing.Point(925, 433);
+            this.AceptarButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AceptarButton.Name = "AceptarButton";
-            this.AceptarButton.Size = new System.Drawing.Size(75, 23);
+            this.AceptarButton.Size = new System.Drawing.Size(100, 28);
             this.AceptarButton.TabIndex = 10;
             this.AceptarButton.Text = "Aceptar";
             this.AceptarButton.UseVisualStyleBackColor = true;
             this.AceptarButton.Click += new System.EventHandler(this.AcceptButton_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(765, 260);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Comentarios:";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            // 
             // EvaluarArticuloForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.AceptarButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.CommentsTextBox);
@@ -173,6 +202,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AreasComboBox);
             this.Controls.Add(this.titulo_tag);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EvaluarArticuloForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -196,5 +226,6 @@
         private System.Windows.Forms.RichTextBox CommentsTextBox;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button AceptarButton;
+        private System.Windows.Forms.Label label2;
     }
 }
