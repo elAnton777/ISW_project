@@ -34,8 +34,6 @@
             this.UserLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.BotonInicio = new System.Windows.Forms.Button();
-            this.UserError = new System.Windows.Forms.Label();
-            this.PasswordError = new System.Windows.Forms.Label();
             this.RegisterButton = new System.Windows.Forms.Button();
             LoginLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -104,34 +102,6 @@
             this.BotonInicio.UseVisualStyleBackColor = true;
             this.BotonInicio.Click += new System.EventHandler(this.BotonInicio_Click);
             // 
-            // UserError
-            // 
-            this.UserError.AutoSize = true;
-            this.UserError.BackColor = System.Drawing.SystemColors.Control;
-            this.UserError.ForeColor = System.Drawing.Color.Firebrick;
-            this.UserError.Location = new System.Drawing.Point(58, 158);
-            this.UserError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.UserError.Name = "UserError";
-            this.UserError.Size = new System.Drawing.Size(81, 13);
-            this.UserError.TabIndex = 6;
-            this.UserError.Text = "Error de usuario";
-            this.UserError.Visible = false;
-            this.UserError.Click += new System.EventHandler(this.UserError_Click);
-            // 
-            // PasswordError
-            // 
-            this.PasswordError.AutoSize = true;
-            this.PasswordError.BackColor = System.Drawing.SystemColors.Control;
-            this.PasswordError.ForeColor = System.Drawing.Color.Firebrick;
-            this.PasswordError.Location = new System.Drawing.Point(58, 272);
-            this.PasswordError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PasswordError.Name = "PasswordError";
-            this.PasswordError.Size = new System.Drawing.Size(100, 13);
-            this.PasswordError.TabIndex = 7;
-            this.PasswordError.Text = "Error de contraseña";
-            this.PasswordError.Visible = false;
-            this.PasswordError.Click += new System.EventHandler(this.PasswordError_Click);
-            // 
             // RegisterButton
             // 
             this.RegisterButton.Location = new System.Drawing.Point(273, 327);
@@ -149,8 +119,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 366);
             this.Controls.Add(this.RegisterButton);
-            this.Controls.Add(this.PasswordError);
-            this.Controls.Add(this.UserError);
             this.Controls.Add(this.BotonInicio);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.UserLabel);
@@ -172,8 +140,6 @@
         private System.Windows.Forms.Label UserLabel;
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.Button BotonInicio;
-        private System.Windows.Forms.Label UserError;
-        private System.Windows.Forms.Label PasswordError;
         private System.Windows.Forms.Button RegisterButton;
     }
 }
