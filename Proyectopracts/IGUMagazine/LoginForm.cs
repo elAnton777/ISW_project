@@ -46,26 +46,7 @@ namespace IGUMagazine
                 this.Close();
             }
             catch (ServiceException ex) {
-                switch(ex.Message)
-                {
-                    case "Introduzca un usuario":   
-                        UserError.Text = ex.Message;
-                        UserError.Visible = true;
-                        break;
-                    case "Introduzca una contraseña":
-                        PasswordError.Text = ex.Message;
-                        PasswordError.Visible= true;
-                        break;
-                    case "El usuario no existe":
-                        UserError.Text = ex.Message;
-                        UserError.Visible = true;
-                        break;
-                    case "La contraseña es incorrecta":
-                        PasswordError.Text = ex.Message;
-                        PasswordError.Visible = true;
-                        break;
-                }
-                
+                MessageBox.Show(ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
