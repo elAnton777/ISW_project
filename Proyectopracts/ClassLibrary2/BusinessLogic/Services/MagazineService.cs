@@ -149,8 +149,14 @@ namespace Magazine.Services
             if (user.Email == "") throw new ServiceException("Introduzca un correo electrónico");
             if (user.Password == "") throw new ServiceException("Introduzca una contraseña");
 
-
-            if (dal.GetById<User>(user.Id) == null || dal.GetWhere<User>(x => x.Login == user.Login) == null || dal.GetWhere<User>(x => x.Email == user.Email) == null)
+            if (dal.GetWhere<User>(x => x.Login == user.Login).Count() != 0) {
+                throw new ServiceException("El usuario ya existe");
+            }
+            if (dal.GetWhere<User>(x => x.Email == user.Email).Count() != 0)
+            {
+                throw new ServiceException("El usuario ya existe");
+            }
+            if (dal.GetById<User>(user.Id) == null)
             {
                 dal.Insert<User>(user);
                 dal.Commit();
