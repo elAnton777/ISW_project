@@ -186,7 +186,7 @@ namespace Magazine.Services
 
 
 
-        void Logout() {
+        public void Logout() {
             user = null;
         }
 

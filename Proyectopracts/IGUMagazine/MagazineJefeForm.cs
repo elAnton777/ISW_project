@@ -47,9 +47,9 @@ namespace IGUMagazine
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Logout_button_click(object sender, EventArgs e)
         {
-
+            LoginForm.service.Logout();
         }
     }
 }
