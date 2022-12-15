@@ -109,7 +109,7 @@ namespace Magazine.Services
                 dal.Insert<Paper>(paper);
                 dal.Commit();
             }
-            else throw new ServiceException("El paper" + paper.Title + " ya existe.");
+            else throw new ServiceException("El paper " + paper.Title + " ya existe.");
 
         }
 
@@ -132,7 +132,7 @@ namespace Magazine.Services
                 return area.First();
             }
             else {
-                throw new ServiceException("El area con nombre " + name + " no exite");
+                throw new ServiceException("El area con nombre " + name + " no existe");
             }
         }
 

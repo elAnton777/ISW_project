@@ -162,9 +162,12 @@ namespace IGUMagazine
                     AreaTextBox.ReadOnly = true;
 
                 }
-                catch (ServiceException)
+                catch (ServiceException ex)
                 {
-
+                    if (ex.Message.StartsWith("El area con nombre")) 
+                    {
+                        MessageBox.Show(ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
 
@@ -332,7 +335,10 @@ namespace IGUMagazine
             }
             catch (ServiceException ex)
             {
-                
+                if (ex.Message.StartsWith("El paper")) {
+                    MessageBox.Show(ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
 
 
