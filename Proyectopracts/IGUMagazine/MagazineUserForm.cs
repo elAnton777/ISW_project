@@ -11,9 +11,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace IGUMagazine
 {
-    public partial class MagazineUForm : Form
+    public partial class MagazineUserForm : Form
     {
-        public MagazineUForm()
+        public MagazineUserForm()
         {
             InitializeComponent();
             autor1.Hide();

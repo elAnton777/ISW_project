@@ -43,6 +43,7 @@ namespace IGUMagazine
                 MagazineUserForm magazineform = new MagazineUserForm();
                 this.Hide();
                 magazineform.ShowDialog();
+                this.Close();
             }
             catch (ServiceException ex) {
                 switch(ex.Message)

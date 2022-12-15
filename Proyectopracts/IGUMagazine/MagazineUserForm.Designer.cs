@@ -1,6 +1,6 @@
 ﻿namespace IGUMagazine
 {
-    partial class MagazineUForm
+    partial class MagazineUserForm
     {
         /// <summary>
         /// Required designer variable.
