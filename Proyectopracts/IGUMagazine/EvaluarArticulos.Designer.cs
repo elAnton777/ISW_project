@@ -1,6 +1,6 @@
 ﻿namespace IGUMagazine
 {
-    partial class Form1
+    partial class EvaluarArticulos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Lista = new System.Windows.Forms.ListView();
             this.Etiqueta_Titulo = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Título = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_de_envío = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Lista
-            // 
-            this.Lista.HideSelection = false;
-            this.Lista.Location = new System.Drawing.Point(12, 74);
-            this.Lista.Name = "Lista";
-            this.Lista.Size = new System.Drawing.Size(397, 130);
-            this.Lista.TabIndex = 0;
-            this.Lista.UseCompatibleStateImageBehavior = false;
-            this.Lista.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Etiqueta_Titulo
             // 
@@ -76,27 +70,59 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Áreas";
             // 
-            // Form1
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Título,
+            this.Autor,
+            this.Fecha_de_envío});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 74);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(406, 150);
+            this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // Título
+            // 
+            this.Título.HeaderText = "Título";
+            this.Título.Name = "Título";
+            // 
+            // Autor
+            // 
+            this.Autor.HeaderText = "Autor";
+            this.Autor.Name = "Autor";
+            // 
+            // Fecha_de_envío
+            // 
+            this.Fecha_de_envío.HeaderText = "Fecha de Envío";
+            this.Fecha_de_envío.Name = "Fecha_de_envío";
+            // 
+            // EvaluarArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Etiqueta_Titulo);
-            this.Controls.Add(this.Lista);
-            this.Name = "Form1";
+            this.Name = "EvaluarArticulos";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView Lista;
         private System.Windows.Forms.Label Etiqueta_Titulo;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Título;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_de_envío;
     }
 }
