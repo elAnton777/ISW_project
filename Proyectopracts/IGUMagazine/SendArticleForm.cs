@@ -22,8 +22,8 @@ namespace IGUMagazine
             InitializeComponent();
             
             //DEBUG
-            //CoAuthorTextBoxName1.Text = LoginForm.service.UserLogged().Name;
-            //CoAuthorTextBoxSurName1.Text = LoginForm.service.UserLogged().Surname;
+            CoAuthorTextBoxName1.Text = LoginForm.service.UserLogged().Name;
+            CoAuthorTextBoxSurName1.Text = LoginForm.service.UserLogged().Surname;
         }
 
         private void MagazineForm_Load(object sender, EventArgs e)
@@ -227,8 +227,17 @@ namespace IGUMagazine
                 person.Name = CoAuthorTextBoxName2.Text;
                 person.Surname = CoAuthorTextBoxSurName2.Text;
 
-                CoAuthors.Add(person);
+                try
+                {
+                    LoginForm.service.FindPersonById(person.Id);
+                }
+                catch (ServiceException)
+                {
+                    LoginForm.service.AddPerson(person);
+                }
 
+                CoAuthors.Add(person);
+                
             }
         }
 
@@ -254,6 +263,15 @@ namespace IGUMagazine
                 person.Id = "3233";
                 person.Name = CoAuthorTextBoxName3.Text;
                 person.Surname = CoAuthorTextBoxSurName3.Text;
+
+                try
+                {
+                    LoginForm.service.FindPersonById(person.Id);
+                }
+                catch (ServiceException)
+                {
+                    LoginForm.service.AddPerson(person);
+                }
 
                 CoAuthors.Add(person);
 
@@ -282,6 +300,15 @@ namespace IGUMagazine
                 person.Id = "4244";
                 person.Name = CoAuthorTextBoxName4.Text;
                 person.Surname = CoAuthorTextBoxSurName4.Text;
+
+                try
+                {
+                    LoginForm.service.FindPersonById(person.Id);
+                }
+                catch (ServiceException)
+                {
+                    LoginForm.service.AddPerson(person);
+                }
 
                 CoAuthors.Add(person);
 

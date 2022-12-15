@@ -113,7 +113,7 @@ namespace Magazine.Services
 
         }
 
-        Person FindPersonById(string id) {
+        public Person FindPersonById(string id) {
             Person person = dal.GetById<Person>(id);
             if (person != null)
             {
