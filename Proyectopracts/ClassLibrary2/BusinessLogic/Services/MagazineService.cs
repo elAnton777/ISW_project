@@ -60,7 +60,10 @@ namespace Magazine.Services
 
         public void AddPerson(Person person)
         {
-            // Restricción: No puede haber dos personas con el mismo DNI
+            if (person.Id == "") throw new ServiceException("El campo id es obligatorio");
+            if (person.Name == "") throw new ServiceException("El campo nombre es obligatorio");
+            if (person.Surname == "") throw new ServiceException("El campo apellido es obligatorio");
+
             if (dal.GetById<Person>(person.Id) == null)
             {
                 dal.Insert<Person>(person);

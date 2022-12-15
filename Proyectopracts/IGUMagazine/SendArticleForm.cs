@@ -201,6 +201,7 @@ namespace IGUMagazine
             Person person = new Person();
             if (CoAuthorTextBoxName2.ReadOnly == true)
             {
+
                 CoAuthorTextBoxName2.ReadOnly = false;
                 CoAuthorTextBoxSurName2.ReadOnly = false;
 
@@ -211,16 +212,17 @@ namespace IGUMagazine
             else
             {
                 person.Id = GenerateRandomId();
-                person.Name = CoAuthorTextBoxName3.Text;
-                person.Surname = CoAuthorTextBoxSurName3.Text;
+                person.Name = CoAuthorTextBoxName2.Text;
+                person.Surname = CoAuthorTextBoxSurName2.Text;
 
+                Console.WriteLine(person.Id + person.Name + " " + person.Surname);
                 try
                 {
-                    LoginForm.service.AddPerson(person);
-                    CoAuthorTextBoxName3.ReadOnly = true;
-                    CoAuthorTextBoxSurName3.ReadOnly = true;
+                    //LoginForm.service.AddPerson(person);
+                    CoAuthorTextBoxName2.ReadOnly = true;
+                    CoAuthorTextBoxSurName2.ReadOnly = true;
 
-                    CoAuthor3Button.Text = "✎";
+                    CoAuthor2Button.Text = "✎";
 
                     CoAuthors.Add(person);
                 }
@@ -281,16 +283,16 @@ namespace IGUMagazine
             else
             {
                 person.Id = GenerateRandomId();
-                person.Name = CoAuthorTextBoxName3.Text;
-                person.Surname = CoAuthorTextBoxSurName3.Text;
+                person.Name = CoAuthorTextBoxName4.Text;
+                person.Surname = CoAuthorTextBoxSurName4.Text;
 
                 try
                 {
                     LoginForm.service.AddPerson(person);
-                    CoAuthorTextBoxName3.ReadOnly = true;
-                    CoAuthorTextBoxSurName3.ReadOnly = true;
+                    CoAuthorTextBoxName4.ReadOnly = true;
+                    CoAuthorTextBoxSurName4.ReadOnly = true;
 
-                    CoAuthor3Button.Text = "✎";
+                    CoAuthor4Button.Text = "✎";
 
                     CoAuthors.Add(person);
                 }
