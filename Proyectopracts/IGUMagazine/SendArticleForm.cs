@@ -1,4 +1,5 @@
-﻿using Magazine.Services;
+﻿using Magazine.Entities;
+using Magazine.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,9 +21,9 @@ namespace IGUMagazine
         {
             InitializeComponent();
            // autor1.Hide();
-            CoAuthorTextBox2.Hide();
-            CoAutorTextBox3.Hide();
-            CoAutorTextBox4.Hide();
+            CoAuthorTextBoxName2.Hide();
+            CoAuthorTextBoxName3.Hide();
+            CoAuthorTextBoxName4.Hide();
             Subbutton.Enabled = false;
         }
 
@@ -53,18 +54,21 @@ namespace IGUMagazine
                     break;*/
 
                 case 2:
-                    CoAuthorTextBox2.Show();
+                    CoAuthorTextBoxName2.Show();
+                    CoAuthorTextBoxSurName2.Show();
                     Subbutton.Enabled = true;
                     count++;
                     break;
 
                 case 3:
-                    CoAutorTextBox3.Show();
+                    CoAuthorTextBoxName3.Show();
+                    CoAuthorTextBoxSurName3.Show();
                     count++;
                     break;
 
                 case 4:
-                    CoAutorTextBox4.Show();
+                    CoAuthorTextBoxName4.Show();
+                    CoAuthorTextBoxSurName4.Show();
                     Addbutton.Enabled = false;
                     count++;
                     break;
@@ -89,27 +93,44 @@ namespace IGUMagazine
             switch (count)
             {
                 case 2:
-                    CoAuthorTextBox1.Hide();
-                    CoAuthorTextBox1.Clear();
+                    CoAuthorTextBoxName1.Hide();
+                    CoAuthorTextBoxName1.Clear();
+
+                    CoAuthorTextBoxSurName1.Hide();
+                    CoAuthorTextBoxSurName1.Clear();
+
                     count--;
                     break;
 
                 case 3:
-                    CoAuthorTextBox2.Hide();
-                    CoAuthorTextBox2.Clear();
-                   Subbutton.Enabled = false;
+                    CoAuthorTextBoxName2.Hide();
+                    CoAuthorTextBoxName2.Clear();
+
+
+                    CoAuthorTextBoxSurName2.Hide();
+                    CoAuthorTextBoxSurName2.Clear();
+
+                    Subbutton.Enabled = false;
                     count--;
                     break;
 
                 case 4:
-                    CoAutorTextBox3.Hide();
-                    CoAutorTextBox3.Clear();
+                    CoAuthorTextBoxName3.Hide();
+                    CoAuthorTextBoxName3.Clear();
+
+                    CoAuthorTextBoxSurName3.Hide();
+                    CoAuthorTextBoxSurName3.Clear();
+
                     count--;
                     break;
 
                 case 5:
-                    CoAutorTextBox4.Hide();
-                    CoAutorTextBox4.Clear();
+                    CoAuthorTextBoxName4.Hide();
+                    CoAuthorTextBoxName4.Clear();
+
+                    CoAuthorTextBoxSurName4.Hide();
+                    CoAuthorTextBoxSurName4.Clear();
+
                     Addbutton.Enabled = true;
                     count--;
                     break;
@@ -170,7 +191,7 @@ namespace IGUMagazine
             try {
                 DateTime CurrentDate = DateTime.Now;
                 Magazine.Entities.User ResponsableUser = LoginForm.service.UserLogged();
-
+                List<Person> CoAuthors = new List<Magazine.Entities.Person>();
 
                 //LoginForm.service.AddPaper(new Magazine.Entities.Paper(TitleTextBox.Text, new DateTime().Now(), area, LoginForm.service.UserLogged()));
             } catch (ServiceException ex) { 
@@ -186,6 +207,21 @@ namespace IGUMagazine
                 AreaTextBox.ReadOnly = false;
                 TitleTextBox.ReadOnly = true;
             }
+        }
+
+        private void CoAutorTextBoxSurName4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CoAuthorTextBoxSurName2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CoAuthorTextBoxSurName3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

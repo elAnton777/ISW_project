@@ -124,11 +124,12 @@ namespace Magazine.Services
             }
         }
         public Area FindAreaByName(string name) {
-            Area area = dal.GetWhere<Area>(x => x.Name == name).First();
-            
-            if (area != null)
+            IEnumerable<Area> area = dal.GetWhere<Area>(x => x.Name == name);
+
+
+            if (area.Count() != 0)
             {
-                return area;
+                return area.First();
             }
             else {
                 throw new ServiceException("El area con nombre " + name + " no exite");
