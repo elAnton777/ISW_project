@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -17,6 +18,7 @@ namespace IGUMagazine
         public EvaluarArticuloForm()
         {
             InitializeComponent();
+            AceptarButton.Enabled = false;
 
             foreach (Area area in LoginForm.service.getAllAreas())
             {
@@ -89,6 +91,19 @@ namespace IGUMagazine
         private void CancelEvaluation_Click(object sender, EventArgs e)
         {
 
+        }
+        int count = 1;
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            count++;
+            if (count % 2 == 0)
+            {
+                AceptarButton.Enabled = true;
+            }
+            else
+            {
+                AceptarButton.Enabled = false;
+            }
         }
     }
 }
