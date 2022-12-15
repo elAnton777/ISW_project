@@ -42,7 +42,7 @@
             this.NumeroRevista.Name = "NumeroRevista";
             this.NumeroRevista.Size = new System.Drawing.Size(210, 29);
             this.NumeroRevista.TabIndex = 0;
-            this.NumeroRevista.Text = "Numero de revista";
+            this.NumeroRevista.Text = "Número de revista";
             this.NumeroRevista.Click += new System.EventHandler(this.label1_Click);
             // 
             // dateTimePicker

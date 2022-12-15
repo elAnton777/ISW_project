@@ -143,7 +143,7 @@ namespace Magazine.Services
         public void Register(User user) {
             Console.WriteLine("He llegado");
             if (user.Name == "") throw new ServiceException("Introduzca un nombre");
-            if (user.Surname == "") throw new ServiceException("Introduzca un apelldio");
+            if (user.Surname == "") throw new ServiceException("Introduzca un apellido");
             if (user.Login == "") throw new ServiceException("Introduzca un usuario");
             if (user.AreasOfInterest == "") throw new ServiceException("Introduzca sus areas de interés");
             if (user.Email == "") throw new ServiceException("Introduzca un correo electrónico");
@@ -282,7 +282,7 @@ namespace Magazine.Services
         }
 
         public void EvaluatePaper(bool accepted, string comments, DateTime date, int paperId) {
-            if (accepted == null) throw new ServiceException("No se ha aceptado o no el articulol");
+            if (accepted == null) throw new ServiceException("No se ha aceptado el artículo");
             if (comments == "") throw new ServiceException("No se han aportado comentarios");
             if (date == null) throw new ServiceException("No se ha aportado una fecha");
 
@@ -295,7 +295,7 @@ namespace Magazine.Services
             }
             else
             {
-                throw new ServiceException("El Articulo no existe");
+                throw new ServiceException("El artículo no existe");
             }
 
         }
@@ -308,7 +308,7 @@ namespace Magazine.Services
             }
             else
             {
-                throw new ServiceException("El Articulo no existe");
+                throw new ServiceException("El artículo no existe");
             }
         }
 
@@ -318,7 +318,7 @@ namespace Magazine.Services
                 return paper.First();
             }
             else {
-                throw new ServiceException("El articulo " + paperTitle + " no existe");
+                throw new ServiceException("El artículo " + paperTitle + " no existe");
             }
         }
 
