@@ -54,7 +54,7 @@ namespace IGUMagazine
         {
 
         }
-
+        
         private void AreaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             String AreaSeleccioada = AreasComboBox.Text;
@@ -66,6 +66,20 @@ namespace IGUMagazine
                     ArticulosComboBox.Items.Add(paper.Title + " ");
                 }
             }
+
+        }
+
+        private void AcceptButton_Click(object sender, EventArgs e)
+        {
+            bool accepted = checkBox1.Checked;
+            string comments = CommentsTextBox.Text;
+            DateTime date= DateTime.Now;
+            Paper paper = LoginForm.service.getPaperByName((string) ArticulosComboBox.SelectedItem);
+            LoginForm.service.EvaluatePaper(accepted, comments, date, paper.Id);
+        }
+
+        private void CancelEvaluation_Click(object sender, EventArgs e)
+        {
 
         }
     }

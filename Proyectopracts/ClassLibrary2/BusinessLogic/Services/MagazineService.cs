@@ -296,6 +296,16 @@ namespace Magazine.Services
             }
         }
 
+        public Paper getPaperByName(string paperTitle) {
+            IEnumerable<Paper> paper = dal.GetWhere<Paper>(x => x.Title == paperTitle);
+            if (paper.Count() > 0) {
+                return paper.First();
+            }
+            else {
+                throw new ServiceException("El articulo " + paperTitle + " no existe");
+            }
+        }
+
         public IEnumerable<Paper> GetAllPapers(string id) {
             IEnumerable<Paper> papers = dal.GetAll<Paper>();
 

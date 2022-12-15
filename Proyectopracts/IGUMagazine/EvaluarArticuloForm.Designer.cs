@@ -37,6 +37,10 @@
             this.Fecha_de_envío = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Articulos = new System.Windows.Forms.Label();
             this.ArticulosComboBox = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.CommentsTextBox = new System.Windows.Forms.RichTextBox();
+            this.CancelButton = new System.Windows.Forms.Button();
+            this.AceptarButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Lista_Articulos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,11 +119,53 @@
             this.ArticulosComboBox.TabIndex = 6;
             this.ArticulosComboBox.SelectedIndexChanged += new System.EventHandler(this.ArticulosComboBox_SelectedIndexChanged);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(576, 180);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(121, 17);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "AcceptedCheckBox";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // CommentsTextBox
+            // 
+            this.CommentsTextBox.Location = new System.Drawing.Point(576, 232);
+            this.CommentsTextBox.Name = "CommentsTextBox";
+            this.CommentsTextBox.Size = new System.Drawing.Size(193, 96);
+            this.CommentsTextBox.TabIndex = 8;
+            this.CommentsTextBox.Text = "";
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.Location = new System.Drawing.Point(576, 352);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(75, 23);
+            this.CancelButton.TabIndex = 9;
+            this.CancelButton.Text = "Cancelar";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelEvaluation_Click);
+            // 
+            // AceptarButton
+            // 
+            this.AceptarButton.Location = new System.Drawing.Point(694, 352);
+            this.AceptarButton.Name = "AceptarButton";
+            this.AceptarButton.Size = new System.Drawing.Size(75, 23);
+            this.AceptarButton.TabIndex = 10;
+            this.AceptarButton.Text = "Aceptar";
+            this.AceptarButton.UseVisualStyleBackColor = true;
+            this.AceptarButton.Click += new System.EventHandler(this.AcceptButton_Click);
+            // 
             // EvaluarArticuloForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AceptarButton);
+            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.CommentsTextBox);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.ArticulosComboBox);
             this.Controls.Add(this.Articulos);
             this.Controls.Add(this.Lista_Articulos);
@@ -145,5 +191,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_de_envío;
         private System.Windows.Forms.Label Articulos;
         private System.Windows.Forms.ComboBox ArticulosComboBox;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.RichTextBox CommentsTextBox;
+        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button AceptarButton;
     }
 }
