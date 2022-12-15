@@ -32,7 +32,7 @@
             // 
             // MagazineJefeForm
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(315, 261);
             this.Name = "MagazineJefeForm";
             this.Load += new System.EventHandler(this.MagazineJefeForm_Load_1);
             this.ResumeLayout(false);

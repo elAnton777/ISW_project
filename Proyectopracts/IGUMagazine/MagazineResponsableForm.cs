@@ -21,5 +21,21 @@ namespace IGUMagazine
         {
 
         }
+
+        private void evaluar_boton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EvaluarArticulos evaluararticulos = new EvaluarArticulos();
+            evaluararticulos.ShowDialog();
+            this.Show();
+        }
+
+        private void enviar_boton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MagazineUserForm magazineuserform = new MagazineUserForm();
+            magazineuserform.ShowDialog();
+            this.Show();
+        }
     }
 }
