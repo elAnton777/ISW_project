@@ -54,13 +54,14 @@ namespace IGUMagazine
         {
 
         }
-        
+
+        Area area = new Area();
         private void AreaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             String AreaSeleccioada = AreasComboBox.Text;
             if (AreaSeleccioada != "")
             {
-                Area area = LoginForm.service.FindAreaByName(AreaSeleccioada);
+                area = LoginForm.service.FindAreaByName(AreaSeleccioada);
                 foreach (Paper paper in area.EvaluationPending)
                 {
                     ArticulosComboBox.Items.Add(paper.Title + " ");
@@ -76,6 +77,13 @@ namespace IGUMagazine
             DateTime date= DateTime.Now;
             Paper paper = LoginForm.service.getPaperByName((string) ArticulosComboBox.SelectedItem);
             LoginForm.service.EvaluatePaper(accepted, comments, date, paper.Id);
+            LoginForm.service.setPublicationPending(area, paper);
+
+            ArticulosComboBox.Items.Clear();
+            ArticulosComboBox.Text = "";
+            checkBox1.Checked = false;
+            CommentsTextBox.Text = "";
+            AreasComboBox.Focus();
         }
 
         private void CancelEvaluation_Click(object sender, EventArgs e)

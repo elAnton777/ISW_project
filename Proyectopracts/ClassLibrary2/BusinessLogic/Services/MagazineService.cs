@@ -267,14 +267,24 @@ namespace Magazine.Services
             dal.Commit();
         }
 
+        public void setPublicationPending(Area area, Paper paper) {
+
+            area.EvaluationPending.Remove(paper);
+            area.PublicationPending.Add(paper);
+
+            dal.Commit();
+        }
+
         public void EvaluatePaper(bool accepted, string comments, DateTime date, int paperId) {
+            if (accepted == null) throw new ServiceException("No se ha aceptado o no el articulol");
+            if (comments == "") throw new ServiceException("No se han aportado comentarios");
+            if (date == null) throw new ServiceException("No se ha aportado una fecha");
+
             Paper paper = dal.GetById<Paper>(paperId);
 
             if (paper != null) {
-                paper.Evaluation.Accepted = accepted;
-                paper.Evaluation.Comments = comments;
-                paper.Evaluation.Date = date;
-
+                Evaluation evaluation = new Evaluation(accepted, comments, date);
+                paper.Evaluation = evaluation;
                 dal.Commit();
             }
             else
