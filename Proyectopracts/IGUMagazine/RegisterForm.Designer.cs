@@ -49,7 +49,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(16, 15);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(39, 33);
             this.button1.TabIndex = 0;
@@ -60,7 +60,7 @@
             // NameTextBox
             // 
             this.NameTextBox.Location = new System.Drawing.Point(261, 73);
-            this.NameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(132, 22);
             this.NameTextBox.TabIndex = 1;
@@ -68,7 +68,7 @@
             // SurnameTextBox
             // 
             this.SurnameTextBox.Location = new System.Drawing.Point(436, 73);
-            this.SurnameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SurnameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.SurnameTextBox.Name = "SurnameTextBox";
             this.SurnameTextBox.Size = new System.Drawing.Size(132, 22);
             this.SurnameTextBox.TabIndex = 2;
@@ -76,7 +76,7 @@
             // UsernameTextBox
             // 
             this.UsernameTextBox.Location = new System.Drawing.Point(261, 145);
-            this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(132, 22);
             this.UsernameTextBox.TabIndex = 3;
@@ -85,7 +85,7 @@
             // EmailTextBox
             // 
             this.EmailTextBox.Location = new System.Drawing.Point(261, 209);
-            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(307, 22);
             this.EmailTextBox.TabIndex = 5;
@@ -148,7 +148,7 @@
             // RegisterButton
             // 
             this.RegisterButton.Location = new System.Drawing.Point(265, 386);
-            this.RegisterButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RegisterButton.Margin = new System.Windows.Forms.Padding(4);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(100, 28);
             this.RegisterButton.TabIndex = 8;
@@ -160,18 +160,18 @@
             // 
             this.AlertedTickBox.AutoSize = true;
             this.AlertedTickBox.Location = new System.Drawing.Point(591, 212);
-            this.AlertedTickBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AlertedTickBox.Margin = new System.Windows.Forms.Padding(4);
             this.AlertedTickBox.Name = "AlertedTickBox";
-            this.AlertedTickBox.Size = new System.Drawing.Size(479, 25);
+            this.AlertedTickBox.Size = new System.Drawing.Size(488, 25);
             this.AlertedTickBox.TabIndex = 6;
-            this.AlertedTickBox.Text = "Desea recibir correos cada vez que se publica una revista?";
+            this.AlertedTickBox.Text = "¿Desea recibir correos cada vez que se publica una revista?";
             this.AlertedTickBox.UseVisualStyleBackColor = true;
             this.AlertedTickBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // AreaOfInterestTextBox
             // 
             this.AreaOfInterestTextBox.Location = new System.Drawing.Point(436, 145);
-            this.AreaOfInterestTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AreaOfInterestTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.AreaOfInterestTextBox.Name = "AreaOfInterestTextBox";
             this.AreaOfInterestTextBox.Size = new System.Drawing.Size(132, 22);
             this.AreaOfInterestTextBox.TabIndex = 4;
@@ -191,7 +191,7 @@
             // PasswordTextBox
             // 
             this.PasswordTextBox.Location = new System.Drawing.Point(261, 273);
-            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(132, 22);
@@ -231,7 +231,7 @@
             this.Controls.Add(this.SurnameTextBox);
             this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegisterForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.RegisterForm_Load);

@@ -41,6 +41,7 @@
             this.CommentsTextBox = new System.Windows.Forms.RichTextBox();
             this.CancelButton = new System.Windows.Forms.Button();
             this.AceptarButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Lista_Articulos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,9 +139,9 @@
             this.checkBox1.Location = new System.Drawing.Point(768, 222);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(148, 20);
+            this.checkBox1.Size = new System.Drawing.Size(240, 25);
             this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "AcceptedCheckBox";
+            this.checkBox1.Text = "¿Quiere aceptar el artículo?";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
@@ -175,11 +176,22 @@
             this.AceptarButton.UseVisualStyleBackColor = true;
             this.AceptarButton.Click += new System.EventHandler(this.AcceptButton_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(765, 260);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Comentarios:";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            // 
             // EvaluarArticuloForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.AceptarButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.CommentsTextBox);
@@ -214,5 +226,6 @@
         private System.Windows.Forms.RichTextBox CommentsTextBox;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button AceptarButton;
+        private System.Windows.Forms.Label label2;
     }
 }

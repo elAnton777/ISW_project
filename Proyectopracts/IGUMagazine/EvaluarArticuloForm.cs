@@ -105,5 +105,10 @@ namespace IGUMagazine
                 AceptarButton.Enabled = false;
             }
         }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
