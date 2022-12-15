@@ -60,16 +60,15 @@
             this.UserTextBox.Name = "UserTextBox";
             this.UserTextBox.Size = new System.Drawing.Size(98, 20);
             this.UserTextBox.TabIndex = 1;
-            this.UserTextBox.TextChanged += new System.EventHandler(this.UserTextBox_TextChanged);
             // 
             // PasswordTextBox
             // 
             this.PasswordTextBox.Location = new System.Drawing.Point(60, 250);
             this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(98, 20);
             this.PasswordTextBox.TabIndex = 2;
-            this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
             // 
             // UserLabel
             // 
