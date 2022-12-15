@@ -16,11 +16,11 @@ namespace IGUMagazine
         public MagazineUserForm()
         {
             InitializeComponent();
-            autor1.Hide();
+           // autor1.Hide();
             autor2.Hide();
             autor3.Hide();
             autor4.Hide();
-            Subbutton2.Enabled = false;
+            Subbutton.Enabled = false;
         }
 
         private void MagazineForm_Load(object sender, EventArgs e)
@@ -37,20 +37,21 @@ namespace IGUMagazine
         {
 
         }
-        int count = 1;
+        int count = 2;
         
         private void button1_Click(object sender, EventArgs e)
         {
             switch (count)
             {
-                case 1:
+               /* case 1:
                     autor1.Show();
                     Subbutton2.Enabled = true;
                     count++;
-                    break;
+                    break;*/
 
                 case 2:
                     autor2.Show();
+                    Subbutton.Enabled = true;
                     count++;
                     break;
 
@@ -87,13 +88,13 @@ namespace IGUMagazine
                 case 2:
                     autor1.Hide();
                     autor1.Clear();
-                    Subbutton2.Enabled = false;
                     count--;
                     break;
 
                 case 3:
                     autor2.Hide();
                     autor2.Clear();
+                   Subbutton.Enabled = false;
                     count--;
                     break;
 

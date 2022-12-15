@@ -38,7 +38,7 @@
             this.autor4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Addbutton = new System.Windows.Forms.Button();
-            this.Subbutton2 = new System.Windows.Forms.Button();
+            this.Subbutton = new System.Windows.Forms.Button();
             this.Send_Button = new System.Windows.Forms.Button();
             this.Area_txt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -133,15 +133,15 @@
             this.Addbutton.UseVisualStyleBackColor = true;
             this.Addbutton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Subbutton2
+            // Subbutton
             // 
-            this.Subbutton2.Location = new System.Drawing.Point(376, 187);
-            this.Subbutton2.Name = "Subbutton2";
-            this.Subbutton2.Size = new System.Drawing.Size(20, 20);
-            this.Subbutton2.TabIndex = 10;
-            this.Subbutton2.Text = "-";
-            this.Subbutton2.UseVisualStyleBackColor = true;
-            this.Subbutton2.Click += new System.EventHandler(this.button2_Click);
+            this.Subbutton.Location = new System.Drawing.Point(376, 187);
+            this.Subbutton.Name = "Subbutton";
+            this.Subbutton.Size = new System.Drawing.Size(20, 20);
+            this.Subbutton.TabIndex = 10;
+            this.Subbutton.Text = "-";
+            this.Subbutton.UseVisualStyleBackColor = true;
+            this.Subbutton.Click += new System.EventHandler(this.button2_Click);
             // 
             // Send_Button
             // 
@@ -168,7 +168,7 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Área";
             // 
-            // MagazineUForm
+            // MagazineUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -176,7 +176,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Area_txt);
             this.Controls.Add(this.Send_Button);
-            this.Controls.Add(this.Subbutton2);
+            this.Controls.Add(this.Subbutton);
             this.Controls.Add(this.Addbutton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.autor4);
@@ -187,7 +187,7 @@
             this.Controls.Add(this.titulo_txt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "MagazineUForm";
+            this.Name = "MagazineUserForm";
             this.Text = "+";
             this.Load += new System.EventHandler(this.MagazineForm_Load);
             this.ResumeLayout(false);
@@ -207,7 +207,7 @@
         private System.Windows.Forms.TextBox autor4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Addbutton;
-        private System.Windows.Forms.Button Subbutton2;
+        private System.Windows.Forms.Button Subbutton;
         private System.Windows.Forms.Button Send_Button;
         private System.Windows.Forms.TextBox Area_txt;
         private System.Windows.Forms.Label label5;
