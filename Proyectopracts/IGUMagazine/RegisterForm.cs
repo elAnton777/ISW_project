@@ -63,38 +63,7 @@ namespace IGUMagazine
 
             }
             catch (ServiceException ex) {
-                //DoSomething
-                switch (ex.Message)
-                {
-                    case "Introduzca un usuario":
-                        UserError.Text = ex.Message;
-                        UserError.Visible = true;
-                        break;
-                    case "Introduzca una contraseña":
-                        PasswordError.Text = ex.Message;
-                        PasswordError.Visible = true;
-                        break;
-                    case "El usuario ya existe":
-                        UserError.Text = ex.Message;
-                        UserError.Visible = true;
-                        break;
-                    case "Introduzca un correo electrónico":
-                        EmailError.Text = ex.Message;
-                        EmailError.Visible = true;
-                        break;
-                    case "Introduzca una area de interes":
-                        AreaError.Text = ex.Message;
-                        AreaError.Visible = true;
-                        break;
-                    case "Introduzca su nombre":
-                        NameError.Text = ex.Message;
-                        NameError.Visible = true;
-                        break;
-                    case "Introduzca su apellido":
-                        SurnameError.Text = ex.Message;
-                        SurnameError.Visible = true;
-                        break;
-                }
+                MessageBox.Show(ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -138,15 +138,24 @@ namespace Magazine.Services
 
 
         public void Register(User user) {
+            Console.WriteLine("He llegado");
+            if (user.Name == "") throw new ServiceException("Introduzca un nombre");
+            if (user.Surname == "") throw new ServiceException("Introduzca un apelldio");
+            if (user.Login == "") throw new ServiceException("Introduzca un usuario");
+            if (user.AreasOfInterest == "") throw new ServiceException("Introduzca sus areas de interés");
+            if (user.Email == "") throw new ServiceException("Introduzca un correo electrónico");
+            if (user.Password == "") throw new ServiceException("Introduzca una contraseña");
+
+
             if (dal.GetById<User>(user.Id) == null)
             {
                 dal.Insert<User>(user);
                 dal.Commit();
             }
-            else {
+            else
+            {
                 throw new ServiceException("El usuario ya existe");
             }
-
         }
 
 
