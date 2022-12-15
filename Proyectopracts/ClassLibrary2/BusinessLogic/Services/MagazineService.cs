@@ -123,11 +123,13 @@ namespace Magazine.Services
                 throw new ServiceException("La persona con Id " + id + " no existe");
             }
         }
-        Area FindAreaByName(string name) {
-            Area area = dal.GetWhere<Area>(x => x.Name == name).First();
-            if (area != null)
+        public Area FindAreaByName(string name) {
+            IEnumerable<Area> area = dal.GetWhere<Area>(x => x.Name == name);
+
+
+            if (area.Count() != 0)
             {
-                return area;
+                return area.First();
             }
             else {
                 throw new ServiceException("El area con nombre " + name + " no exite");
@@ -215,7 +217,7 @@ namespace Magazine.Services
             user = null;
         }
 
-        User UserLogged()
+        public User UserLogged()
         {
             if (user == null)
             {
