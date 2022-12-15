@@ -309,11 +309,15 @@ namespace IGUMagazine
                 DateTime currentDate = DateTime.Now;
                 User responsableUser = LoginForm.service.UserLogged();
                 Paper paper = new Paper(title, currentDate, area, responsableUser);
-                
-                foreach(Person person in CoAuthors) { 
+
+                CoAuthors.Add(new Person(responsableUser.Id, responsableUser.Name, responsableUser.Surname));
+
+                foreach(Person person in CoAuthors) {
+                    //Console.WriteLine(person.Name);
                     paper.CoAuthors.Add(person);
                 }
-                Console.WriteLine(paper.ToString());
+
+                //Console.WriteLine(paper.ToString());
                 LoginForm.service.AddPaper(paper);
                 LoginForm.service.AddPendingEvaluatePaperToArea(area, paper);
             }
