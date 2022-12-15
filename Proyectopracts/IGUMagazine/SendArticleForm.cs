@@ -35,7 +35,6 @@ namespace IGUMagazine
 
         }
         int count = 1;
-        
         private void AddCoAuthorClick(object sender, EventArgs e)
         {
             count++;
@@ -189,6 +188,14 @@ namespace IGUMagazine
         {
 
         }
+
+        private string GenerateRandomId() {
+            Random _random = new Random();
+            string _id = _random.Next(0, 9999).ToString("D4");
+
+            return _id;
+        }
+
         private void CoAuthor2Button_Click(object sender, EventArgs e)
         {
             Person person = new Person();
@@ -203,26 +210,24 @@ namespace IGUMagazine
             }
             else
             {
-                CoAuthorTextBoxName2.ReadOnly = true;
-                CoAuthorTextBoxSurName2.ReadOnly = true;
-
-                CoAuthor2Button.Text = "✎";
-
-                person.Id = "1312";
-                person.Name = CoAuthorTextBoxName2.Text;
-                person.Surname = CoAuthorTextBoxSurName2.Text;
+                person.Id = GenerateRandomId();
+                person.Name = CoAuthorTextBoxName3.Text;
+                person.Surname = CoAuthorTextBoxSurName3.Text;
 
                 try
                 {
-                    LoginForm.service.FindPersonById(person.Id);
-                }
-                catch (ServiceException)
-                {
                     LoginForm.service.AddPerson(person);
-                }
+                    CoAuthorTextBoxName3.ReadOnly = true;
+                    CoAuthorTextBoxSurName3.ReadOnly = true;
 
-                CoAuthors.Add(person);
-                
+                    CoAuthor3Button.Text = "✎";
+
+                    CoAuthors.Add(person);
+                }
+                catch (ServiceException ex)
+                {
+                    MessageBox.Show(ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -240,26 +245,24 @@ namespace IGUMagazine
             }
             else
             {
-                CoAuthorTextBoxName3.ReadOnly = true;
-                CoAuthorTextBoxSurName3.ReadOnly = true;
-
-                CoAuthor3Button.Text = "✎";
-
-                person.Id = "3233";
+                person.Id = GenerateRandomId();
                 person.Name = CoAuthorTextBoxName3.Text;
                 person.Surname = CoAuthorTextBoxSurName3.Text;
 
                 try
                 {
-                    LoginForm.service.FindPersonById(person.Id);
-                }
-                catch (ServiceException)
-                {
                     LoginForm.service.AddPerson(person);
+                    CoAuthorTextBoxName3.ReadOnly = true;
+                    CoAuthorTextBoxSurName3.ReadOnly = true;
+
+                    CoAuthor3Button.Text = "✎";
+
+                    CoAuthors.Add(person);
                 }
-
-                CoAuthors.Add(person);
-
+                catch (ServiceException ex)
+                {
+                    MessageBox.Show(ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -277,26 +280,24 @@ namespace IGUMagazine
             }
             else
             {
-                CoAuthorTextBoxName4.ReadOnly = true;
-                CoAuthorTextBoxSurName4.ReadOnly = true;
-
-                CoAuthor4Button.Text = "✎";
-
-                person.Id = "4244";
-                person.Name = CoAuthorTextBoxName4.Text;
-                person.Surname = CoAuthorTextBoxSurName4.Text;
+                person.Id = GenerateRandomId();
+                person.Name = CoAuthorTextBoxName3.Text;
+                person.Surname = CoAuthorTextBoxSurName3.Text;
 
                 try
                 {
-                    LoginForm.service.FindPersonById(person.Id);
-                }
-                catch (ServiceException)
-                {
                     LoginForm.service.AddPerson(person);
+                    CoAuthorTextBoxName3.ReadOnly = true;
+                    CoAuthorTextBoxSurName3.ReadOnly = true;
+
+                    CoAuthor3Button.Text = "✎";
+
+                    CoAuthors.Add(person);
                 }
-
-                CoAuthors.Add(person);
-
+                catch (ServiceException ex)
+                {
+                    MessageBox.Show(ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
