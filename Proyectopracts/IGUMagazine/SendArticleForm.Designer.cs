@@ -31,17 +31,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TitleTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.TituloLabel = new System.Windows.Forms.Label();
             this.CoAuthorTextBoxName1 = new System.Windows.Forms.TextBox();
             this.CoAuthorTextBoxName2 = new System.Windows.Forms.TextBox();
             this.CoAuthorTextBoxName3 = new System.Windows.Forms.TextBox();
             this.CoAuthorTextBoxName4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.CoAuthorLabel = new System.Windows.Forms.Label();
             this.Addbutton = new System.Windows.Forms.Button();
             this.Subbutton = new System.Windows.Forms.Button();
             this.Send_Button = new System.Windows.Forms.Button();
             this.AreaTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.AreaLabel = new System.Windows.Forms.Label();
             this.CoAuthorTextBoxSurName1 = new System.Windows.Forms.TextBox();
             this.CoAuthorTextBoxSurName2 = new System.Windows.Forms.TextBox();
             this.CoAuthorTextBoxSurName3 = new System.Windows.Forms.TextBox();
@@ -60,7 +60,6 @@
             this.label1.Size = new System.Drawing.Size(109, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "BIENVENIDO";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -71,7 +70,6 @@
             this.label2.Size = new System.Drawing.Size(132, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nueva Contribucíon";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // TitleTextBox
             // 
@@ -82,15 +80,15 @@
             this.TitleTextBox.TabIndex = 2;
             this.TitleTextBox.TextChanged += new System.EventHandler(this.titulo_txt_TextChanged);
             // 
-            // label3
+            // TituloLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(63, 246);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Título";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.TituloLabel.AutoSize = true;
+            this.TituloLabel.Location = new System.Drawing.Point(63, 246);
+            this.TituloLabel.Name = "TituloLabel";
+            this.TituloLabel.Size = new System.Drawing.Size(35, 13);
+            this.TituloLabel.TabIndex = 3;
+            this.TituloLabel.Text = "Título";
+            this.TituloLabel.Click += new System.EventHandler(this.label3_Click);
             // 
             // CoAuthorTextBoxName1
             // 
@@ -126,16 +124,15 @@
             this.CoAuthorTextBoxName4.Size = new System.Drawing.Size(100, 20);
             this.CoAuthorTextBoxName4.TabIndex = 7;
             this.CoAuthorTextBoxName4.Visible = false;
-            this.CoAuthorTextBoxName4.TextChanged += new System.EventHandler(this.CoAuthorTextBoxName4_TextChanged);
             // 
-            // label4
+            // CoAuthorLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(271, 191);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Colaboradores";
+            this.CoAuthorLabel.AutoSize = true;
+            this.CoAuthorLabel.Location = new System.Drawing.Point(271, 191);
+            this.CoAuthorLabel.Name = "CoAuthorLabel";
+            this.CoAuthorLabel.Size = new System.Drawing.Size(75, 13);
+            this.CoAuthorLabel.TabIndex = 8;
+            this.CoAuthorLabel.Text = "Colaboradores";
             // 
             // Addbutton
             // 
@@ -145,7 +142,7 @@
             this.Addbutton.TabIndex = 9;
             this.Addbutton.Text = "+";
             this.Addbutton.UseVisualStyleBackColor = true;
-            this.Addbutton.Click += new System.EventHandler(this.button1_Click);
+            this.Addbutton.Click += new System.EventHandler(this.AddCoAuthorClick);
             // 
             // Subbutton
             // 
@@ -156,7 +153,7 @@
             this.Subbutton.TabIndex = 10;
             this.Subbutton.Text = "-";
             this.Subbutton.UseVisualStyleBackColor = true;
-            this.Subbutton.Click += new System.EventHandler(this.button2_Click);
+            this.Subbutton.Click += new System.EventHandler(this.SubstractCoAuthorClick);
             // 
             // Send_Button
             // 
@@ -180,14 +177,14 @@
             this.AreaTextBox.Enter += new System.EventHandler(this.AreaTextBoxLeave);
             this.AreaTextBox.Leave += new System.EventHandler(this.AreaTextBoxLeave);
             // 
-            // label5
+            // AreaLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(63, 190);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Área";
+            this.AreaLabel.AutoSize = true;
+            this.AreaLabel.Location = new System.Drawing.Point(63, 190);
+            this.AreaLabel.Name = "AreaLabel";
+            this.AreaLabel.Size = new System.Drawing.Size(29, 13);
+            this.AreaLabel.TabIndex = 13;
+            this.AreaLabel.Text = "Área";
             // 
             // CoAuthorTextBoxSurName1
             // 
@@ -269,23 +266,22 @@
             this.Controls.Add(this.CoAuthorTextBoxSurName3);
             this.Controls.Add(this.CoAuthorTextBoxSurName2);
             this.Controls.Add(this.CoAuthorTextBoxSurName1);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.AreaLabel);
             this.Controls.Add(this.AreaTextBox);
             this.Controls.Add(this.Send_Button);
             this.Controls.Add(this.Subbutton);
             this.Controls.Add(this.Addbutton);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.CoAuthorLabel);
             this.Controls.Add(this.CoAuthorTextBoxName4);
             this.Controls.Add(this.CoAuthorTextBoxName3);
             this.Controls.Add(this.CoAuthorTextBoxName2);
             this.Controls.Add(this.CoAuthorTextBoxName1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.TituloLabel);
             this.Controls.Add(this.TitleTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "SendArticleForm";
             this.Text = "+";
-            this.Load += new System.EventHandler(this.MagazineForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,17 +292,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TitleTextBox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label TituloLabel;
         private System.Windows.Forms.TextBox CoAuthorTextBoxName1;
         private System.Windows.Forms.TextBox CoAuthorTextBoxName2;
         private System.Windows.Forms.TextBox CoAuthorTextBoxName3;
         private System.Windows.Forms.TextBox CoAuthorTextBoxName4;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label CoAuthorLabel;
         private System.Windows.Forms.Button Addbutton;
         private System.Windows.Forms.Button Subbutton;
         private System.Windows.Forms.Button Send_Button;
         private System.Windows.Forms.TextBox AreaTextBox;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label AreaLabel;
         private System.Windows.Forms.TextBox CoAuthorTextBoxSurName1;
         private System.Windows.Forms.TextBox CoAuthorTextBoxSurName2;
         private System.Windows.Forms.TextBox CoAuthorTextBoxSurName3;

@@ -25,12 +25,6 @@ namespace IGUMagazine
             CoAuthorTextBoxName1.Text = LoginForm.service.UserLogged().Name;
             CoAuthorTextBoxSurName1.Text = LoginForm.service.UserLogged().Surname;
         }
-
-        private void MagazineForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -40,10 +34,11 @@ namespace IGUMagazine
         {
 
         }
-        int count = 2;
+        int count = 1;
         
-        private void button1_Click(object sender, EventArgs e)
+        private void AddCoAuthorClick(object sender, EventArgs e)
         {
+            count++;
             switch (count)
             {
                 case 2:
@@ -51,14 +46,12 @@ namespace IGUMagazine
                     CoAuthorTextBoxSurName2.Show();
                     CoAuthor2Button.Show();
                     Subbutton.Enabled = true;
-                    count++;
                     break;
 
                 case 3:
                     CoAuthorTextBoxName3.Show();
                     CoAuthorTextBoxSurName3.Show();
                     CoAuthor3Button.Show();
-                    count++;
                     break;
 
                 case 4:
@@ -66,7 +59,6 @@ namespace IGUMagazine
                     CoAuthorTextBoxSurName4.Show();
                     CoAuthor4Button.Show();
                     Addbutton.Enabled = false;
-                    count++;
                     break;
 
             }
@@ -83,16 +75,12 @@ namespace IGUMagazine
 
         }
         List<Person> CoAuthors = new List<Magazine.Entities.Person>();
-        private void button2_Click(object sender, EventArgs e)
+        private void SubstractCoAuthorClick(object sender, EventArgs e)
         {
-
+            
             switch (count)
             {
                 case 2:
-                    count--;
-                    break;
-
-                case 3:
                     CoAuthorTextBoxName2.Hide();
                     CoAuthorTextBoxName2.Clear();
 
@@ -103,10 +91,9 @@ namespace IGUMagazine
                     CoAuthor2Button.Hide();
 
                     Subbutton.Enabled = false;
-                    count--;
                     break;
 
-                case 4:
+                case 3:
                     CoAuthorTextBoxName3.Hide();
                     CoAuthorTextBoxName3.Clear();
 
@@ -115,10 +102,9 @@ namespace IGUMagazine
 
                     CoAuthor3Button.Hide();
 
-                    count--;
                     break;
 
-                case 5:
+                case 4:
                     CoAuthorTextBoxName4.Hide();
                     CoAuthorTextBoxName4.Clear();
 
@@ -128,12 +114,10 @@ namespace IGUMagazine
                     CoAuthor4Button.Hide();
 
                     Addbutton.Enabled = true;
-                    count--;
                     break;
-
-                
             }
-          
+            count--;
+
         }
 
         private void label3_Click(object sender, EventArgs e)
