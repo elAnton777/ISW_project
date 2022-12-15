@@ -35,6 +35,8 @@
             this.Título = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_de_envío = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Articulos = new System.Windows.Forms.Label();
+            this.ArticulosComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Lista_Articulos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             this.AreasComboBox.Name = "AreasComboBox";
             this.AreasComboBox.Size = new System.Drawing.Size(121, 21);
             this.AreasComboBox.TabIndex = 2;
-            this.AreasComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.AreasComboBox.SelectedIndexChanged += new System.EventHandler(this.AreaComboBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -99,16 +101,42 @@
             this.Fecha_de_envío.HeaderText = "Fecha de Envío";
             this.Fecha_de_envío.Name = "Fecha_de_envío";
             // 
-            // EvaluarArticulos
+            // Articulos
+            // 
+            this.Articulos.AutoSize = true;
+            this.Articulos.Location = new System.Drawing.Point(573, 111);
+            this.Articulos.Name = "Articulos";
+            this.Articulos.Size = new System.Drawing.Size(47, 13);
+            this.Articulos.TabIndex = 5;
+            this.Articulos.Text = "Articulos";
+            this.Articulos.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // ArticulosComboBox
+            // 
+            this.ArticulosComboBox.FormattingEnabled = true;
+            this.ArticulosComboBox.Items.AddRange(new object[] {
+            "Área1",
+            "Área2",
+            "Área3",
+            "Área4"});
+            this.ArticulosComboBox.Location = new System.Drawing.Point(576, 137);
+            this.ArticulosComboBox.Name = "ArticulosComboBox";
+            this.ArticulosComboBox.Size = new System.Drawing.Size(121, 21);
+            this.ArticulosComboBox.TabIndex = 6;
+            this.ArticulosComboBox.SelectedIndexChanged += new System.EventHandler(this.ArticulosComboBox_SelectedIndexChanged);
+            // 
+            // EvaluarArticuloForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ArticulosComboBox);
+            this.Controls.Add(this.Articulos);
             this.Controls.Add(this.Lista_Articulos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AreasComboBox);
             this.Controls.Add(this.titulo_tag);
-            this.Name = "EvaluarArticulos";
+            this.Name = "EvaluarArticuloForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Lista_Articulos)).EndInit();
@@ -125,5 +153,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Título;
         private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_de_envío;
+        private System.Windows.Forms.Label Articulos;
+        private System.Windows.Forms.ComboBox ArticulosComboBox;
     }
 }
