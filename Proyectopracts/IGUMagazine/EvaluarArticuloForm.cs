@@ -17,8 +17,8 @@ namespace IGUMagazine
         public EvaluarArticuloForm()
         {
             InitializeComponent();
-            
-            foreach(Area area in LoginForm.service.getAllAreas())
+
+            foreach (Area area in LoginForm.service.getAllAreas())
             {
                 AreasComboBox.Items.Add(area.Name);
             }
@@ -57,8 +57,16 @@ namespace IGUMagazine
 
         private void AreaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            
+            String AreaSeleccioada = AreasComboBox.Text;
+            if (AreaSeleccioada != "")
+            {
+                Area area = LoginForm.service.FindAreaByName(AreaSeleccioada);
+                foreach (Paper paper in area.EvaluationPending)
+                {
+                    ArticulosComboBox.Items.Add(paper);
+                }
+            }
+
         }
     }
 }

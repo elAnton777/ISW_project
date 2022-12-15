@@ -53,11 +53,6 @@
             // AreasComboBox
             // 
             this.AreasComboBox.FormattingEnabled = true;
-            this.AreasComboBox.Items.AddRange(new object[] {
-            "Área1",
-            "Área2",
-            "Área3",
-            "Área4"});
             this.AreasComboBox.Location = new System.Drawing.Point(576, 74);
             this.AreasComboBox.Name = "AreasComboBox";
             this.AreasComboBox.Size = new System.Drawing.Size(121, 21);
@@ -114,11 +109,6 @@
             // ArticulosComboBox
             // 
             this.ArticulosComboBox.FormattingEnabled = true;
-            this.ArticulosComboBox.Items.AddRange(new object[] {
-            "Área1",
-            "Área2",
-            "Área3",
-            "Área4"});
             this.ArticulosComboBox.Location = new System.Drawing.Point(576, 137);
             this.ArticulosComboBox.Name = "ArticulosComboBox";
             this.ArticulosComboBox.Size = new System.Drawing.Size(121, 21);
