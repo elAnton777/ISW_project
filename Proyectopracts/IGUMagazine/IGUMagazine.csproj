@@ -62,6 +62,18 @@
     <Compile Include="EvaluarArticulos.Designer.cs">
       <DependentUpon>EvaluarArticulos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConfeccionarEjemplar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfeccionarEjemplar.Designer.cs">
+      <DependentUpon>ConfeccionarEjemplar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaArticulos.Designer.cs">
+      <DependentUpon>ListaArticulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="MagazineResponsableForm.cs">
       <SubType>Form</SubType>
     </Compile>
