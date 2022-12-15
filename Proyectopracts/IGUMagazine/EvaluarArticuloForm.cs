@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Magazine.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,11 +12,17 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace IGUMagazine
 {
-    public partial class EvaluarArticulos : Form
+    public partial class EvaluarArticuloForm : Form
     {
-        public EvaluarArticulos()
+        public EvaluarArticuloForm()
         {
             InitializeComponent();
+            
+            foreach(Area area in LoginForm.service.getAllAreas())
+            {
+                AreasComboBox.Items.Add(area.Name);
+            }
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,6 +36,11 @@ namespace IGUMagazine
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

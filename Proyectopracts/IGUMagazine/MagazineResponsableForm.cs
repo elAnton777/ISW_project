@@ -25,7 +25,7 @@ namespace IGUMagazine
         private void evaluar_boton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            EvaluarArticulos evaluararticulos = new EvaluarArticulos();
+            EvaluarArticuloForm evaluararticulos = new EvaluarArticuloForm();
             evaluararticulos.ShowDialog();
             this.Show();
         }

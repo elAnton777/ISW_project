@@ -1,6 +1,6 @@
 ﻿namespace IGUMagazine
 {
-    partial class EvaluarArticulos
+    partial class EvaluarArticuloForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.titulo_tag = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.AreasComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Lista_Articulos = new System.Windows.Forms.DataGridView();
             this.Título = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,18 +48,19 @@
             this.titulo_tag.TabIndex = 1;
             this.titulo_tag.Text = "Artículos a Evaluar";
             // 
-            // comboBox1
+            // AreasComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.AreasComboBox.FormattingEnabled = true;
+            this.AreasComboBox.Items.AddRange(new object[] {
             "Área1",
             "Área2",
             "Área3",
             "Área4"});
-            this.comboBox1.Location = new System.Drawing.Point(576, 74);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 2;
+            this.AreasComboBox.Location = new System.Drawing.Point(576, 74);
+            this.AreasComboBox.Name = "AreasComboBox";
+            this.AreasComboBox.Size = new System.Drawing.Size(121, 21);
+            this.AreasComboBox.TabIndex = 2;
+            this.AreasComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -105,7 +106,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Lista_Articulos);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.AreasComboBox);
             this.Controls.Add(this.titulo_tag);
             this.Name = "EvaluarArticulos";
             this.Text = "Form1";
@@ -118,7 +119,7 @@
 
         #endregion
         private System.Windows.Forms.Label titulo_tag;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox AreasComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView Lista_Articulos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Título;
