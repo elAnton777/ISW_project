@@ -60,6 +60,7 @@ namespace IGUMagazine
 
                 Magazine.Entities.User _user = new Magazine.Entities.User(_id, NameTextBox.Text, SurnameTextBox.Text, AlertedTickBox.Checked, AreaOfInterestTextBox.Text, EmailTextBox.Text, UsernameTextBox.Text, PasswordTextBox.Text);
                 LoginForm.service.Register(_user);
+                this.Close();   
 
             }
             catch (ServiceException ex) {
