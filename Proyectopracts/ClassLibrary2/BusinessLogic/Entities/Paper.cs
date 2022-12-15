@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,7 +33,7 @@ namespace Magazine.Entities
             this.Responsible = Responsible;
 
             this.BelongingArea = BelongingArea;
-            CoAuthors.Add(Responsible);
+            AddCoAuthor(Responsible);
 
             //this.CoAuthors = new List<Person>();
         }

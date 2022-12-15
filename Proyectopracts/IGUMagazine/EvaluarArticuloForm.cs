@@ -19,8 +19,6 @@ namespace IGUMagazine
         public EvaluarArticuloForm()
         {
             InitializeComponent();
-            AceptarButton.Enabled = false;
-
             foreach (Area area in LoginForm.service.getAllAreas())
             {
                 AreasComboBox.Items.Add(area.Name);
@@ -67,7 +65,7 @@ namespace IGUMagazine
                 area = LoginForm.service.FindAreaByName(AreaSeleccioada);
                 foreach (Paper paper in area.EvaluationPending)
                 {
-                    ArticulosComboBox.Items.Add(paper.Title + " ");
+                    ArticulosComboBox.Items.Add(paper.Title + " " + paper.CoAuthors.First().Name + " " + paper.UploadDate);
                 }
             }
 
@@ -77,7 +75,7 @@ namespace IGUMagazine
         {
             try
             {
-                bool accepted = checkBox1.Checked;
+                bool accepted = AcceptArticleCheckBox.Checked;
                 string comments = CommentsTextBox.Text;
                 DateTime date = DateTime.Now;
                 Paper paper = LoginForm.service.getPaperByName((string)ArticulosComboBox.SelectedItem);
@@ -86,7 +84,7 @@ namespace IGUMagazine
 
                 ArticulosComboBox.Items.Clear();
                 ArticulosComboBox.Text = "";
-                checkBox1.Checked = false;
+                AcceptArticleCheckBox.Checked = false;
                 CommentsTextBox.Text = "";
                 AreasComboBox.Focus();
             } catch(ServiceException ex) {
@@ -102,15 +100,7 @@ namespace IGUMagazine
         int count = 1;
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            count++;
-            if (count % 2 == 0)
-            {
-                AceptarButton.Enabled = true;
-            }
-            else
-            {
-                AceptarButton.Enabled = false;
-            }
+
         }
 
         private void label2_Click_1(object sender, EventArgs e)
@@ -118,7 +108,7 @@ namespace IGUMagazine
 
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void AcceptArticleCheckBox_CheckedChanged(object sender, EventArgs e)
         {
 
         }

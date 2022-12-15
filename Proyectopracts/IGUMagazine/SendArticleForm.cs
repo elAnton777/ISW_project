@@ -73,7 +73,7 @@ namespace IGUMagazine
         {
 
         }
-        List<Person> CoAuthors = new List<Magazine.Entities.Person>();
+        List<Person> CoAuthors = new List<Person>();
         private void SubstractCoAuthorClick(object sender, EventArgs e)
         {
             
@@ -309,12 +309,11 @@ namespace IGUMagazine
                 DateTime currentDate = DateTime.Now;
                 User responsableUser = LoginForm.service.UserLogged();
                 Paper paper = new Paper(title, currentDate, area, responsableUser);
-
-                CoAuthors.Add(new Person(responsableUser.Id, responsableUser.Name, responsableUser.Surname));
+                
 
                 foreach(Person person in CoAuthors) {
                     //Console.WriteLine(person.Name);
-                    paper.CoAuthors.Add(person);
+                    paper.AddCoAuthor(person);
                 }
 
                 //Console.WriteLine(paper.ToString());
