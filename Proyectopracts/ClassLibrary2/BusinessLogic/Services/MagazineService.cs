@@ -57,7 +57,7 @@ namespace Magazine.Services
             AddUser(u4);
         }
 
-        
+
         public void AddPerson(Person person)
         {
             // Restricción: No puede haber dos personas con el mismo DNI
@@ -169,10 +169,10 @@ namespace Magazine.Services
             }
             catch (Exception)
             {
-            //?
+                //?
             }
 
-            
+
 
             if (user == null)
             {
@@ -273,7 +273,7 @@ namespace Magazine.Services
             {
                 return paper.Evaluation.Accepted;
             }
-            else 
+            else
             {
                 throw new ServiceException("El Articulo no existe");
             }
@@ -289,6 +289,19 @@ namespace Magazine.Services
             else
             {
                 throw new ServiceException("No se han encontrado articulos");
+            }
+        }
+
+        public IEnumerable<Area> getAllAreas() {
+            IEnumerable<Area> areas = dal.GetAll<Area>();
+
+            if (areas.Count() > 0)
+            {
+                return areas;   
+            }
+            else
+            {
+                throw new ServiceException("No se han encontrado areas");
             }
         }
 
