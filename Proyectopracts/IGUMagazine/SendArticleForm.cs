@@ -20,11 +20,10 @@ namespace IGUMagazine
         public SendArticleForm()
         {
             InitializeComponent();
-           // autor1.Hide();
-            CoAuthorTextBoxName2.Hide();
-            CoAuthorTextBoxName3.Hide();
-            CoAuthorTextBoxName4.Hide();
-            Subbutton.Enabled = false;
+            
+            //DEBUG
+            //CoAuthorTextBoxName1.Text = LoginForm.service.UserLogged().Name;
+            //CoAuthorTextBoxSurName1.Text = LoginForm.service.UserLogged().Surname;
         }
 
         private void MagazineForm_Load(object sender, EventArgs e)
@@ -47,12 +46,6 @@ namespace IGUMagazine
         {
             switch (count)
             {
-               /* case 1:
-                    autor1.Show();
-                    Subbutton2.Enabled = true;
-                    count++;
-                    break;*/
-
                 case 2:
                     CoAuthorTextBoxName2.Show();
                     CoAuthorTextBoxSurName2.Show();
@@ -96,14 +89,6 @@ namespace IGUMagazine
             switch (count)
             {
                 case 2:
-                    CoAuthorTextBoxName1.Hide();
-                    CoAuthorTextBoxName1.Clear();
-
-                    CoAuthorTextBoxSurName1.Hide();
-                    CoAuthorTextBoxSurName1.Clear();
-
-                    CoAuthor1Button.Hide();
-
                     count--;
                     break;
 
@@ -197,19 +182,6 @@ namespace IGUMagazine
             }
         }
 
-        private void Send_Button_Click(object sender, EventArgs e)
-        {
-            try {
-                DateTime CurrentDate = DateTime.Now;
-                Magazine.Entities.User ResponsableUser = LoginForm.service.UserLogged();
-                //LoginForm.service.AddPaper(new Magazine.Entities.Paper(TitleTextBox.Text, new DateTime().Now(), area, LoginForm.service.UserLogged()));
-            } catch (ServiceException ex) { 
-                
-            }
-            
-
-        }
-
         private void EditAreaDoubleClick(object sender, EventArgs e)
         {
             if (AreaTextBox.ReadOnly == true) {
@@ -232,75 +204,116 @@ namespace IGUMagazine
         {
 
         }
-
-        private void CoAuthor1Button_Click(object sender, EventArgs e)
+        private void CoAuthor2Button_Click(object sender, EventArgs e)
         {
-            if (CoAuthorTextBoxName1.ReadOnly == true)
+            Person person = new Person();
+            if (CoAuthorTextBoxName2.ReadOnly == true)
             {
-                CoAuthorTextBoxName1.ReadOnly = false;
-                CoAuthorTextBoxSurName1.ReadOnly = false;
-                CoAuthor1Button.Text = "✓";
+                CoAuthorTextBoxName2.ReadOnly = false;
+                CoAuthorTextBoxSurName2.ReadOnly = false;
 
+                CoAuthor2Button.Text = "✓";
+
+                CoAuthors.Remove(person);
             }
             else
             {
-                CoAuthorTextBoxName1.ReadOnly = true;
-                CoAuthorTextBoxSurName1.ReadOnly = true;
-                CoAuthor1Button.Text = "✎";
-
-            }
-        }
-
-        private void CoAuthor2Button_Click(object sender, EventArgs e)
-        {
-            if (CoAuthorTextBoxName2.ReadOnly == true){
-                CoAuthorTextBoxName2.ReadOnly = false;
-                CoAuthorTextBoxSurName2.ReadOnly = false;
-                CoAuthor2Button.Text = "✓";
-
-            }
-            else {
                 CoAuthorTextBoxName2.ReadOnly = true;
                 CoAuthorTextBoxSurName2.ReadOnly = true;
+
                 CoAuthor2Button.Text = "✎";
+
+                person.Id = "1312";
+                person.Name = CoAuthorTextBoxName2.Text;
+                person.Surname = CoAuthorTextBoxSurName2.Text;
+
+                CoAuthors.Add(person);
 
             }
         }
 
         private void CoAuthor3Button_Click(object sender, EventArgs e)
         {
+            Person person = new Person();
             if (CoAuthorTextBoxName3.ReadOnly == true)
             {
                 CoAuthorTextBoxName3.ReadOnly = false;
                 CoAuthorTextBoxSurName3.ReadOnly = false;
+
                 CoAuthor3Button.Text = "✓";
 
+                CoAuthors.Remove(person);
             }
             else
             {
                 CoAuthorTextBoxName3.ReadOnly = true;
                 CoAuthorTextBoxSurName3.ReadOnly = true;
+
                 CoAuthor3Button.Text = "✎";
+
+                person.Id = "3233";
+                person.Name = CoAuthorTextBoxName3.Text;
+                person.Surname = CoAuthorTextBoxSurName3.Text;
+
+                CoAuthors.Add(person);
 
             }
         }
 
         private void CoAuthor4Button_Click(object sender, EventArgs e)
         {
+            Person person = new Person();
             if (CoAuthorTextBoxName4.ReadOnly == true)
             {
                 CoAuthorTextBoxName4.ReadOnly = false;
                 CoAuthorTextBoxSurName4.ReadOnly = false;
+
                 CoAuthor4Button.Text = "✓";
 
+                CoAuthors.Remove(person);
             }
             else
             {
                 CoAuthorTextBoxName4.ReadOnly = true;
                 CoAuthorTextBoxSurName4.ReadOnly = true;
+
                 CoAuthor4Button.Text = "✎";
 
+                person.Id = "4244";
+                person.Name = CoAuthorTextBoxName4.Text;
+                person.Surname = CoAuthorTextBoxSurName4.Text;
+
+                CoAuthors.Add(person);
+
             }
+        }
+
+        private void Send_Button_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String title = TitleTextBox.Text;
+                DateTime currentDate = DateTime.Now;
+                User responsableUser = LoginForm.service.UserLogged();
+                Paper paper = new Paper(title, currentDate, area, responsableUser);
+                
+                foreach(Person person in CoAuthors) { 
+                    paper.CoAuthors.Add(person);
+                }
+                Console.WriteLine(paper.ToString());
+                LoginForm.service.AddPaper(paper);
+            }
+            catch (ServiceException ex)
+            {
+                
+            }
+
+
+        }
+
+        private void CoAuthorTextBoxName4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
