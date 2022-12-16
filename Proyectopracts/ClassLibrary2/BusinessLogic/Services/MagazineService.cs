@@ -364,6 +364,7 @@ namespace Magazine.Services
                 {
                     int issueNumber = magazine.Issues.Count + 1;
                     Issue issue = new Issue(issueNumber, magazine);
+                    magazine.CurrentIssue= issue;
                     dal.Commit();
                     return issue;
                 }

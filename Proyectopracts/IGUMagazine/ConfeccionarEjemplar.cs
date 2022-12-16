@@ -49,25 +49,29 @@ namespace IGUMagazine
                 //Poner lo de los mensajes
             }
         }
-
+        Area selectedArea = new Area();
         private void AreaPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
+            PublicationPendingListBox.Items.Clear();
+            CurrentAreaIssueListBox.Items.Clear();
             try
             {
-                Area area = LoginForm.service.FindAreaByName(AreaPicker.SelectedItem.ToString());
-                IEnumerable<Paper> publicationPendingPapers = LoginForm.service.GetPublicationPendingPapers(area);
+                selectedArea = LoginForm.service.FindAreaByName(AreaPicker.SelectedItem.ToString());
+                foreach (Paper issue_paper in issue.PublishedPapers)
+                {
+                    if (issue_paper.BelongingArea == selectedArea)
+                    {
+                        CurrentAreaIssueListBox.Items.Add(issue_paper.Title);
+                    }
+                }
+                IEnumerable<Paper> publicationPendingPapers = LoginForm.service.GetPublicationPendingPapers(selectedArea);
                 foreach (Paper paper in publicationPendingPapers)
                 {
-                    if (!issue.PublishedPapers.Contains(paper))
-                    {
-                        PublicationPendingListBox.Items.Add(paper.Title);
-                    }
-                    else
-                    {
-                        CurrentAreaIssueListBox.Items.Add(paper.Title);
-                    }
+
+                    PublicationPendingListBox.Items.Add(paper.Title);
 
                 }
+
             }
             catch (ServiceException ex)
             {
@@ -77,13 +81,25 @@ namespace IGUMagazine
 
         private void AddToIssueButton_Click(object sender, EventArgs e)
         {
-            CurrentAreaIssueListBox.Items.Add(PublicationPendingListBox.SelectedItem);
-            PublicationPendingListBox.Items.Remove(PublicationPendingListBox.SelectedItem);
-            Area selectedArea = LoginForm.service.FindAreaByName(AreaPicker.SelectedItem.ToString());
+            if (PublicationPendingListBox.SelectedItems.Count > 0)
+            {
+
+                Paper paper = LoginForm.service.getPaperByName(PublicationPendingListBox.SelectedItem.ToString());
+                selectedArea.PublicationPending.Remove(paper);
+                issue.PublishedPapers.Add(paper);
+                LoginForm.service.Commit();
+                CurrentAreaIssueListBox.Items.Add(PublicationPendingListBox.SelectedItem);
+                PublicationPendingListBox.Items.Remove(PublicationPendingListBox.SelectedItem);
+            }
+
         }
 
         private void RemoveFromIssueButton_Click(object sender, EventArgs e)
         {
+            Paper paper = LoginForm.service.getPaperByName(CurrentAreaIssueListBox.SelectedItem.ToString());
+            issue.PublishedPapers.Remove(paper);
+            selectedArea.PublicationPending.Add(paper);
+            LoginForm.service.Commit();
             PublicationPendingListBox.Items.Add(CurrentAreaIssueListBox.SelectedItem);
             CurrentAreaIssueListBox.Items.Remove(CurrentAreaIssueListBox.SelectedItem);
         }
