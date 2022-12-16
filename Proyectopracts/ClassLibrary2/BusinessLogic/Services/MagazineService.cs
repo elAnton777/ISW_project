@@ -34,7 +34,7 @@ namespace Magazine.Services
 
         public void DBInitialization()
         {
-            RemoveAllData();
+          /*  RemoveAllData();
 
             User u1 = new User("1234", "Pepe", "TheBoss", false, "ninguna", "ptheboss@gmail.com", "theboss", "1234");
             AddUser(u1);
@@ -54,7 +54,7 @@ namespace Magazine.Services
 
             // De regalo
             User u4 = new User("4567", "Juan", "Campeador", false, "la mejor", "jcampeador@gmail.com", "jcampeador", "1234");
-            AddUser(u4);
+            AddUser(u4);*/
         }
 
 
