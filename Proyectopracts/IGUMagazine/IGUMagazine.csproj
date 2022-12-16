@@ -120,6 +120,9 @@
     <EmbeddedResource Include="EvaluarArticuloForm.resx">
       <DependentUpon>EvaluarArticuloForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListaArticulos.resx">
+      <DependentUpon>ListaArticulos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

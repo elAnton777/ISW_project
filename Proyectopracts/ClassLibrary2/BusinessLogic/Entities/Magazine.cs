@@ -18,6 +18,7 @@ namespace Magazine.Entities
             //this.Id = Id;
             this.Name = Name;
             this.ChiefEditor = ChiefEditor;
+            this.CurrentIssue = null;
 
            /* this.Issues = new List<Issue>();
             this.Areas = new List<Area>();*/

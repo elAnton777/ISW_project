@@ -39,7 +39,7 @@
             this.ArticulosComboBox = new System.Windows.Forms.ComboBox();
             this.AcceptArticleCheckBox = new System.Windows.Forms.CheckBox();
             this.CommentsTextBox = new System.Windows.Forms.RichTextBox();
-            this.CancelButton = new System.Windows.Forms.Button();
+            this.CancelarButton = new System.Windows.Forms.Button();
             this.AceptarButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Lista_Articulos)).BeginInit();
@@ -146,15 +146,15 @@
             this.CommentsTextBox.TabIndex = 8;
             this.CommentsTextBox.Text = "";
             // 
-            // CancelButton
+            // CancelarButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(576, 352);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(75, 23);
-            this.CancelButton.TabIndex = 9;
-            this.CancelButton.Text = "Cancelar";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelEvaluation_Click);
+            this.CancelarButton.Location = new System.Drawing.Point(576, 352);
+            this.CancelarButton.Name = "CancelarButton";
+            this.CancelarButton.Size = new System.Drawing.Size(75, 23);
+            this.CancelarButton.TabIndex = 9;
+            this.CancelarButton.Text = "Cancelar";
+            this.CancelarButton.UseVisualStyleBackColor = true;
+            this.CancelarButton.Click += new System.EventHandler(this.CancelEvaluation_Click);
             // 
             // AceptarButton
             // 
@@ -184,7 +184,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.AceptarButton);
-            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.CancelarButton);
             this.Controls.Add(this.CommentsTextBox);
             this.Controls.Add(this.AcceptArticleCheckBox);
             this.Controls.Add(this.ArticulosComboBox);
@@ -214,7 +214,7 @@
         private System.Windows.Forms.ComboBox ArticulosComboBox;
         private System.Windows.Forms.CheckBox AcceptArticleCheckBox;
         private System.Windows.Forms.RichTextBox CommentsTextBox;
-        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button CancelarButton;
         private System.Windows.Forms.Button AceptarButton;
         private System.Windows.Forms.Label label2;
     }

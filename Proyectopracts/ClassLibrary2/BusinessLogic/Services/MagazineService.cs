@@ -233,7 +233,7 @@ namespace Magazine.Services
             }
         }
 
-        IEnumerable<Entities.Magazine> GetAllMagazines() {
+        public IEnumerable<Entities.Magazine> GetAllMagazines() {
             IEnumerable<Entities.Magazine> magazines = dal.GetAll<Entities.Magazine>();
 
             if (magazines.Count() > 0) {
@@ -256,7 +256,7 @@ namespace Magazine.Services
             }
         }
 
-        IEnumerable<Paper> GetPublicationPendingPapers(Area area)
+        public IEnumerable<Paper> GetPublicationPendingPapers(Area area)
         {
             if (area.PublicationPending.Count > 0)
             {
@@ -278,6 +278,12 @@ namespace Magazine.Services
             area.EvaluationPending.Remove(paper);
             area.PublicationPending.Add(paper);
 
+            dal.Commit();
+        }
+
+        public void RemoveFromEvaluationPending(Area area, Paper paper)
+        {
+            area.EvaluationPending.Remove(paper);
             dal.Commit();
         }
 
@@ -340,12 +346,46 @@ namespace Magazine.Services
 
             if (areas.Count() > 0)
             {
-                return areas;   
+                return areas;
             }
             else
             {
                 throw new ServiceException("No se han encontrado areas");
             }
+        }
+
+        public Issue getIssue(Entities.Magazine magazine) {
+            if (this.user == magazine.ChiefEditor) {
+                if (magazine.CurrentIssue != null)
+                {
+                    return magazine.CurrentIssue;
+                }
+                else 
+                {
+                    int issueNumber = magazine.Issues.Count + 1;
+                    Issue issue = new Issue(issueNumber, magazine);
+                    dal.Commit();
+                    return issue;
+                }
+            }
+            else
+            {
+                throw new ServiceException("El usuario no es Chief Editor");
+            }
+        }
+
+        public Entities.Magazine FindMagazine(string magazinName)
+        {
+            IEnumerable<Entities.Magazine> magazine = dal.GetWhere<Entities.Magazine>(x => x.Name == magazinName);
+            if (magazine.Count() > 0)
+            {
+                return magazine.First();
+            }
+            else
+            {
+                throw new ServiceException("No existe esa revista");
+            }
+
         }
 
         void IMagazineService.Logout()
@@ -372,5 +412,7 @@ namespace Magazine.Services
         {
             throw new NotImplementedException();
         }
+
+
     }
 }

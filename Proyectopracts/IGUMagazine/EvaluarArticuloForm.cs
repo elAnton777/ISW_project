@@ -78,19 +78,33 @@ namespace IGUMagazine
                 bool accepted = AcceptArticleCheckBox.Checked;
                 string comments = CommentsTextBox.Text;
                 DateTime date = DateTime.Now;
-                Paper paper = LoginForm.service.getPaperByName((string)ArticulosComboBox.SelectedItem);
+                string titulo = ((string)ArticulosComboBox.SelectedItem).Split(' ')[0];
+                Paper paper = LoginForm.service.getPaperByName(titulo);
+
+
                 LoginForm.service.EvaluatePaper(accepted, comments, date, paper.Id);
-                LoginForm.service.setPublicationPending(area, paper);
+                if(accepted)
+                {
+                    LoginForm.service.setPublicationPending(area, paper);
+                }
+                else
+                {
+                    LoginForm.service.RemoveFromEvaluationPending(area, paper);
+                }
+                
 
                 ArticulosComboBox.Items.Clear();
                 ArticulosComboBox.Text = "";
                 AcceptArticleCheckBox.Checked = false;
                 CommentsTextBox.Text = "";
                 AreasComboBox.Focus();
-            } catch(ServiceException ex) {
+                this.Close();
+            } 
+            catch(ServiceException ex)
+            {
                 MessageBox.Show(ex.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            this.Close();
+            
         }
 
         private void CancelEvaluation_Click(object sender, EventArgs e)

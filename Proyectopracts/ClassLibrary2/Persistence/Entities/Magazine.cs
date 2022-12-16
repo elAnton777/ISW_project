@@ -20,5 +20,6 @@ namespace Magazine.Entities
 
         public virtual ICollection<Issue> Issues { get; set; }
 
+        public virtual Issue CurrentIssue { get; set; }
     }
 }
