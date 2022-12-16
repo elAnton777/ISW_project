@@ -20,8 +20,8 @@ namespace Magazine.Entities
             this.ChiefEditor = ChiefEditor;
             this.CurrentIssue = null;
 
-           /* this.Issues = new List<Issue>();
-            this.Areas = new List<Area>();*/
+            /* this.Issues = new List<Issue>();
+             this.Areas = new List<Area>();*/
         }
     }
 }
